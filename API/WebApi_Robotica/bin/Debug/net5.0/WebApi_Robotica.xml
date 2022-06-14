@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApi_Robotica</name>
+    </assembly>
+    <members>
+        <member name="M:WebApi_Robotica.Controllers.LoginController.Login(WebApi_Robotica.ViewModels.LoginViewModel)">
+            <summary>
+            Valida o usuário
+            </summary>
+            <param name="login">Objeto login que contém o e-mail e a senha do usuário</param>
+            <returns>Retorna um token com as informações do usuário</returns>
+            dominio/api/Login
+        </member>
+        <member name="M:WebApi_Robotica.Interfaces.IEstudanteRepository.Cadastrar(WebApi_Robotica.Domains.Estudante)">
+            <summary>
+            Cadastra um usuario estudante
+            </summary>
+            <param name="user">usuário estudante que será cadastrado</param>
+            <returns>Um usuário estudante cadastrado</returns>
+        </member>
+        <member name="M:WebApi_Robotica.Interfaces.IEstudanteRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um usuário através do ID
+            </summary>
+            <param name="id">ID do usuário do tipo estudante que será buscado</param>
+            <returns>Um usuário estudante buscado</returns>
+        </member>
+        <member name="M:WebApi_Robotica.Interfaces.IProfessorRepository.Cadastrar(WebApi_Robotica.Domains.Professor)">
+            <summary>
+            Cadastra um usuario Professor
+            </summary>
+            <param name="user">usuário Professor que será cadastrado</param>
+            <returns>Um usuário Professor cadastrado</returns>
+        </member>
+        <member name="M:WebApi_Robotica.Interfaces.IProfessorRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um usuário Professor através do ID
+            </summary>
+            <param name="id">ID do usuário do tipo Professor que será buscado</param>
+            <returns>Um usuário Professor buscado</returns>
+        </member>
+        <member name="M:WebApi_Robotica.Interfaces.IQuestaoRepository.Cadastrar(WebApi_Robotica.Domains.Questao)">
+            <summary>
+            Realiza o cadastro de uma questão
+            </summary>
+            <param name="novaQuestao">Objeto de questão</param>
+        </member>
+        <member name="M:WebApi_Robotica.Interfaces.IQuestaoRepository.Listar(System.Int32)">
+            <summary>
+            lista todas as questoes de um questionario
+            </summary>
+            <param name="idQuestionario">Id do questionario que deseja listar as questões</param>
+            <returns>Uma lista com as questões do questionario especificado</returns>
+        </member>
+        <member name="M:WebApi_Robotica.Interfaces.IQuestaoRepository.Atualizar(WebApi_Robotica.Domains.Questao,System.Int32)">
+            <summary>
+            Atualiza algo na questão desejada
+            </summary>
+            <param name="questaoAtualizada">Objeto com as novas informações da questão</param>
+            <param name="idQuestao">Id da questão que deseja alterar</param>
+        </member>
+        <member name="M:WebApi_Robotica.Interfaces.IQuestaoRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma questão
+            </summary>
+            <param name="idQuestao">Id da questão que será excluida</param>
+        </member>
+        <member name="M:WebApi_Robotica.Interfaces.IQuestionarioRepository.Cadastrar(WebApi_Robotica.Domains.Questionario)">
+            <summary>
+            Realiza o cadastro de um questionario
+            </summary>
+            <param name="novoQuestionario">Objeto de questionario</param>
+        </member>
+        <member name="M:WebApi_Robotica.Interfaces.IQuestionarioRepository.Listar(System.Int32)">
+            <summary>
+            lista todas os questionarios de uma turma
+            </summary>
+            <param name="idSerie">Id da serie que deseja listar os questionarios</param>
+            <returns>Uma lista com os questionarios de determinada turma</returns>
+        </member>
+        <member name="M:WebApi_Robotica.Interfaces.IQuestionarioRepository.Atualizar(WebApi_Robotica.Domains.Questionario,System.Int32)">
+            <summary>
+            Atualiza algo no questionario
+            </summary>
+            <param name="questionarioAtualizado">Objeto com as novas informações do questionario</param>
+            <param name="idQuestionario">Id do questionario que deseja alterar</param>
+        </member>
+        <member name="M:WebApi_Robotica.Interfaces.IQuestionarioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um questionario
+            </summary>
+            <param name="idQuestionario">Id do questionario que será excluido</param>
+        </member>
+        <member name="M:WebApi_Robotica.Interfaces.ISerieRepository.Listar">
+            <summary>
+            Lista todas as Series
+            </summary>
+            <returns>Uma lista com todas as Series</returns>
+        </member>
+        <member name="M:WebApi_Robotica.Interfaces.IUsuarioRepository.Login(System.String,System.String)">
+            <summary>
+            Valida o usuário e realiza o login
+            </summary>
+            <param name="email">E-mail do usuário</param>
+            <param name="senha">Senha do usuário</param>
+            <returns>Um objeto do tipo Usuario que foi encontrado</returns>
+        </member>
+        <member name="M:WebApi_Robotica.Interfaces.IUsuarioRepository.Listar">
+            <summary>
+            Lista todos os usuários
+            </summary>
+            <returns>Uma lista de usuários</returns>
+        </member>
+        <member name="M:WebApi_Robotica.Interfaces.IUsuarioRepository.Atualizar(System.Int32,WebApi_Robotica.Domains.Usuario)">
+            <summary>
+            Atualiza um usuário existente
+            </summary>
+            <param name="id">ID do usuário que será atualizado</param>
+            <param name="usuarioAtualizado">Objeto com as novas informações</param>
+        </member>
+        <member name="M:WebApi_Robotica.Interfaces.IUsuarioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um usuário existente
+            </summary>
+            <param name="id">ID do usuário que será deletado</param>
+        </member>
+        <member name="M:WebApi_Robotica.Interfaces.IUsuarioRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um usuário através do ID
+            </summary>
+            <param name="id">ID do usuário que será buscado</param>
+            <returns>Um usuário buscado</returns>
+        </member>
+        <member name="M:WebApi_Robotica.Interfaces.IUsuarioRepository.Cadastrar(WebApi_Robotica.Domains.Usuario)">
+            <summary>
+            Cadastra um usuario
+            </summary>
+            <param name="user">usuário que será cadastrado</param>
+            <returns>Um usuário cadastrado</returns>
+        </member>
+    </members>
+</doc>
