@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\WebApi_Robotica\\WebApi_Robotica.csproj": {}
+    "C:\\Users\\User\\Desktop\\Robotica\\API\\WebApi_Robotica\\WebApi_Robotica.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\WebApi_Robotica\\WebApi_Robotica.csproj": {
+    "C:\\Users\\User\\Desktop\\Robotica\\API\\WebApi_Robotica\\WebApi_Robotica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\WebApi_Robotica\\WebApi_Robotica.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Robotica\\API\\WebApi_Robotica\\WebApi_Robotica.csproj",
         "projectName": "WebApi_Robotica",
-        "projectPath": "C:\\Users\\User\\source\\repos\\WebApi_Robotica\\WebApi_Robotica.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\Robotica\\API\\WebApi_Robotica\\WebApi_Robotica.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\WebApi_Robotica\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Robotica\\API\\WebApi_Robotica\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

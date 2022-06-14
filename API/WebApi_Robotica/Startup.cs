@@ -101,7 +101,7 @@ namespace WebApi_Robotica
 
             app.UseSwaggerUI(c => {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "CloudPlanning.webAPI");
-                c.RoutePrefix = "/";
+                c.RoutePrefix = "";
             });
 
             app.UseRouting();

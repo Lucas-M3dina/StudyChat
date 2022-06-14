@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cs35R2qIb01Iog8qpgK+IiDXirw7qK+kzFt0lOaOUGVniAa5aSpGPM4VlZEOLPi9PIwzBHoNyZIDcRE5SdHPnQ==",
+  "dgSpecHash": "BZBruxv1482CREdzRacTDbTYGcjybnYbU/BpxdK+wyvRtFGc9tgNGJZg1UP0EK9hF9gJMIzt+gC+lUTvyrmRiw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\source\\repos\\WebApi_Robotica\\WebApi_Robotica.csproj",
+  "projectFilePath": "C:\\Users\\User\\Desktop\\Robotica\\API\\WebApi_Robotica\\WebApi_Robotica.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
