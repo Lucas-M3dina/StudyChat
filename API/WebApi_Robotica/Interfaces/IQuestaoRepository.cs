@@ -33,5 +33,7 @@ namespace WebApi_Robotica.Interfaces
         /// </summary>
         /// <param name="idQuestao">Id da questão que será excluida</param>
         void Deletar(int idQuestao);
+
+        Questao BuscarPorId(int id);
     }
 }

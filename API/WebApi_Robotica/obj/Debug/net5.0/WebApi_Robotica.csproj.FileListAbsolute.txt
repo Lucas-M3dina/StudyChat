@@ -74,3 +74,4 @@ C:\Users\User\Desktop\Robotica\API\WebApi_Robotica\obj\Debug\net5.0\ref\WebApi_R
 C:\Users\User\Desktop\Robotica\API\WebApi_Robotica\obj\Debug\net5.0\WebApi_Robotica.xml
 C:\Users\User\Desktop\Robotica\API\WebApi_Robotica\obj\Debug\net5.0\WebApi_Robotica.pdb
 C:\Users\User\Desktop\Robotica\API\WebApi_Robotica\obj\Debug\net5.0\WebApi_Robotica.genruntimeconfig.cache
+C:\Users\User\Desktop\Robotica\API\WebApi_Robotica\obj\Debug\net5.0\WebApi_Robotica.csproj.AssemblyReference.cache

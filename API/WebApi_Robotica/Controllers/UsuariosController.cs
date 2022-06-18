@@ -26,11 +26,16 @@ namespace WebApi_Robotica.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            int idUsuario = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
-            return Ok(_usuarioRepository.BuscarPorId(idUsuario));
+            try
+            {
+                int idUsuario = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
+                return Ok(_usuarioRepository.BuscarPorId(idUsuario));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.InnerException.Message);
+            }
         }
-
-
 
 
         [HttpPost]
@@ -45,7 +50,7 @@ namespace WebApi_Robotica.Controllers
             catch (Exception ex)
             {
 
-                return BadRequest(ex);
+                return StatusCode(400, ex.InnerException.Message);
             }
         }
     }

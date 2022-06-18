@@ -19,7 +19,7 @@ namespace WebApi_Robotica.Interfaces
         /// </summary>
         /// <param name="idSerie">Id da serie que deseja listar os questionarios</param>
         /// <returns>Uma lista com os questionarios de determinada turma</returns>
-        List<Questionario> Listar(int idSerie);
+        List<Questionario> Listar(int? idSerie);
 
         /// <summary>
         /// Atualiza algo no questionario

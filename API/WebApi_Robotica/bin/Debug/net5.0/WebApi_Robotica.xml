@@ -72,7 +72,7 @@
             </summary>
             <param name="novoQuestionario">Objeto de questionario</param>
         </member>
-        <member name="M:WebApi_Robotica.Interfaces.IQuestionarioRepository.Listar(System.Int32)">
+        <member name="M:WebApi_Robotica.Interfaces.IQuestionarioRepository.Listar(System.Nullable{System.Int32})">
             <summary>
             lista todas os questionarios de uma turma
             </summary>

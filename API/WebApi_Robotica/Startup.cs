@@ -13,6 +13,7 @@ using System.IO;
 using System.Reflection;
 using WebApi_Robotica.Contexts;
 using WebApi_Robotica.Interfaces;
+using WebApi_Robotica.Repositories;
 
 namespace WebApi_Robotica
 {
@@ -85,6 +86,11 @@ namespace WebApi_Robotica
 
             services.AddTransient<DbContext, RoboticaContext>();
             services.AddTransient<IUsuarioRepository, UsuarioRepository>();
+            services.AddTransient<IEstudanteRepository, EstudanteRepository>();
+            services.AddTransient<IProfessorRepository, ProfessorRepository>(); 
+            services.AddTransient<ISerieRepository, SerieRepository>();
+            services.AddTransient<IQuestionarioRepository, QuestionarioRepository>();
+            services.AddTransient<IQuestaoRepository, QuestaoRepository>();
 
 
         }

@@ -60,10 +60,10 @@ namespace CloudPlanning_WebApi.Repositories
             ctx.SaveChanges();
         }
 
-        public List<Usuario> Listar()
+       public List<Usuario> Listar()
         {
             return ctx.Usuarios.ToList();
-        }
+        } 
 
         public Usuario Login(string email, string password)
         {
