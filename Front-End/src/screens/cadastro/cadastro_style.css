@@ -15,13 +15,13 @@
 }
 
 .box-body{
+    background-image: url(/src/assets/banner-cadastro-fundo.png);
     display: flex;
     flex-direction: row;
     height: 837px;
 }
 
 .esquerda{
-    background-color:#00964F;
     width: 100%;
     display: flex;
     flex-direction: column;
