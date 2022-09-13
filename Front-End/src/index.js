@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import Login from "./screens/login/login.jsx";
 import Chat from "./screens/chat/chat.jsx"
 import Cadastro from './screens/cadastro/cadastro.jsx';
+import Home from "./screens/home/home.jsx"
 
 import {
   Route,
@@ -23,6 +24,7 @@ const routing = (
         <Route exact path="/" component={Login}></Route>
         <Route exact path="/chat" component={Chat}></Route>
         <Route exact path="/cadastro" component={Cadastro}></Route>
+        <Route exact path="/home" component={Home}></Route>
       </Switch>
     </div>
   </Router>
