@@ -1,9 +1,9 @@
 import React from "react";
-import logo from '../assets/logo.png'
-import icon from '../assets/bot-icone.png'
-import butao from '../assets/aviao-icone.png'
+import logo from '../../assets/logo.png'
+import icon from '../../assets/bot-icone.png'
+import butao from '../../assets/aviao-icone.png'
 
-import api from '../services/api'
+import api from '../../services/api'
 import { Component } from 'react';
 import { Link } from 'react-router-dom'
 import { render } from "react-dom";

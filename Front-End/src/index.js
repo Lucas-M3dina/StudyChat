@@ -1,8 +1,9 @@
 import React from 'react';
-import App from './App';
+
 import ReactDOM from 'react-dom';
-import Login from "./screens/login.jsx";
-import Chat from "./screens/chat"
+import Login from "./screens/login/login.jsx";
+import Chat from "./screens/chat/chat.jsx"
+import Cadastro from './screens/cadastro/cadastro.jsx';
 
 import {
   Route,
@@ -21,6 +22,7 @@ const routing = (
       <Switch>
         <Route exact path="/" component={Login}></Route>
         <Route exact path="/chat" component={Chat}></Route>
+        <Route exact path="/cadastro" component={Cadastro}></Route>
       </Switch>
     </div>
   </Router>
