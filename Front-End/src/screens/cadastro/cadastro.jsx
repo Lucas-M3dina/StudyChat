@@ -13,7 +13,7 @@ export default class Cadastro extends Component {
     super(props)
     this.state = {
       isLoading: false,
-      idTipoUsuario: 1,
+      idTipoUsuario: 1, 
       nomeUsuario: '',
       email: '',
       senha: '',
@@ -76,12 +76,13 @@ export default class Cadastro extends Component {
     return (
       <div className='box-body'>
         <div className="esquerda">
-          <img src={logo} alt="logo Darede" />
-          <img src={banner} className='undraw' alt="banner cadastro" />
-        </div>
-        <div className="direita">
-          <h1 className="h1-login">Cadastro</h1>
           <form action="submit" onSubmit={this.cadastrarUsuario}>
+          <h1 className="h1-login">Cadastro</h1>
+
+          <div className='imput-choose' >
+          <button type="submit" className='btn-choose' >Professor</button>
+          <button type="submit" className='btn-choose' >Aluno</button>
+          </div>
 
             <input type="text" placeholder="Nome de Usuário"
               name='nomeUsuario'
@@ -110,11 +111,13 @@ export default class Cadastro extends Component {
             <p style={{ color: 'red' }}>{this.state.erroMensagem}</p>
 
             <button type="submit" className="btn-form">Cadastrar</button>
-          </form>
-
           <div className="conta">
-            <p>Já possui uma conta?</p> <Link to="/">Conecte-se.</Link>
-          </div>
+          <Link to="/">Já possuo conta</Link>
+        </div>
+          </form>
+        </div>
+        <div className="direita">
+          
         </div>
       </div>
     );

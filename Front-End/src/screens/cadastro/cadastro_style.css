@@ -9,16 +9,43 @@
 }
 
 .h1-login {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 45px;
+    font-family: 'Single Day' sans-serif;
+    font-size: 65px;
     margin-top: 20px;
+}
+
+.imput-choose{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 104%;
+}
+
+.btn-choose{
+    width: 12rem;
+    height: 2.7rem;
+    background-color: #FB9964;
+    border-radius: 10px;
+    font-family: 'Titillium Web', sans-serif;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.cadastro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .box-body{
     background-image: url(/src/assets/banner-cadastro-fundo.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
     display: flex;
     flex-direction: row;
-    height: 837px;
+    height: 100vh;
 }
 
 .esquerda{
@@ -30,7 +57,6 @@
 }
 
 .direita{
-    background-color: #ffffff;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -38,36 +64,40 @@
     justify-content: space-evenly;
 }
 
-.direita form{
+.esquerda form{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 50%;
+    height: 90%;
+    background-color: #ffffffa1;
+    width: 540px;
+    border-radius: 15px;
 }
 
-.direita input{
-    width: 18rem;
+.esquerda input{
+    width: 28rem;
     height: 3rem;
     border-radius: 5px;
-    border-color: 1px black;
     padding-left: 5px;
+    background-color: #FB9964;
 }
 
-.direita input::placeholder{
-    font-family: 'Open Sans', sans-serif;
-    color: #627282;
-    padding-left: 1px;
+.esquerda input::placeholder{
+    font-family: 'Titillium Web', sans-serif;
+    color: #ffffff;
+    padding-left: 3px;
 }
 
 .btn-form{
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     font-size: large;
-    background-color: #00964F;
+    background-color: #ED8EC1;
     color: #ffffff;
+    cursor: pointer;
     border: none;
-    border-radius: 25px;
+    border-radius: 10px;
     width: 13rem;
     height: 3rem;
 }
@@ -80,9 +110,9 @@
 }
 
 .conta a{
-    font-family: 'Open Sans', sans-serif;
-    color: #00AFF4;
-    text-decoration: none;
+    font-family: 'Titillium Web', sans-serif;
+    color: #F03384;
+    text-decoration-line: underline;
 }
 
 .redirect{
