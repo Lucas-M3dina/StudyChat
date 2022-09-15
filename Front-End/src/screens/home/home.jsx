@@ -3,7 +3,12 @@ import logo from '../../assets/logo.png'
 import astronauta from '../../assets/astronauta-home.png'
 import './home_style.css'
 import et from  '../../assets/et.png'
+import menino from '../../assets/menino-home.png'
+import dev1 from '../../assets/dev1.png'
+import dev2 from '../../assets/dev2.png'
+import dev3 from '../../assets/dev3.png'
 
+import Footer from '../../components/footer'
 import api from '../../services/api'
 import { Component } from 'react';
 import { Link } from 'react-router-dom'
@@ -45,9 +50,24 @@ export default class Cadastro extends Component {
             </section>
 
             <section className="nuvem-amarela">
-                
+              <div className="box-nuvem-amarela">
+                <h2 className="sobre"> Sobre nós</h2>
+                <p className="texto-sobre">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
+              </div>
+              <img src={menino} alt="" className="menino-nuvem-amarela" />
+            </section>
+
+            <section className="desenvolvedores">
+              <h2 className="titulo-desenvolvedores"> Conheça nossos desenvolvedores</h2>
+              <div className="container-desenvolvedores">
+                <img src={dev1} alt="Desenvolvedor" className="dev" />
+                <img src={dev2} alt="Desenvolvedor" className="dev" />
+                <img src={dev3} alt="Desenvolvedor" className="dev" />
+              </div>
             </section>
         </main>
+        
+        <Footer/>
       </>
     );
   }
