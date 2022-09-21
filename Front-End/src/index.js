@@ -5,6 +5,7 @@ import Login from "./screens/login/login.jsx";
 import Chat from "./screens/chat/chat.jsx"
 import Cadastro from './screens/cadastro/cadastro.jsx';
 import Home from "./screens/home/home.jsx"
+import MeusChats from './screens/meus-chats/meus-chats.jsx';
 
 import {
   Route,
@@ -12,7 +13,7 @@ import {
   Switch,
 } from 'react-router-dom';
 
-import './index.css';
+
 
 
 import reportWebVitals from './reportWebVitals';
@@ -25,6 +26,7 @@ const routing = (
         <Route exact path="/chat" component={Chat}></Route>
         <Route exact path="/cadastro" component={Cadastro}></Route>
         <Route exact path="/home" component={Home}></Route>
+        <Route exact path="/meuschats" component={MeusChats}></Route>
       </Switch>
     </div>
   </Router>

@@ -8,14 +8,17 @@
 
 .laranja{
     color: #FF5D05;
+    min-width: 236px;
 }
 
 .ciano{
     color: #2F6BB1;
+    min-width: 86px;
 }
 
 .vinho{
     color: #7A2D72;
+    min-width: 151px;
 }
 
 .container-header-home{
@@ -24,6 +27,7 @@
     align-items: center;
     width: 80%;
     margin: 0 auto;
+    min-width: 1148px;
     height: 90px;
 }
 
@@ -47,12 +51,11 @@
     width: 130px;
 }
 
-.titulo{
+.titulo-home{
     font-family: 'Titillium Web';
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
-    line-height: 72px;
 }
 
 
@@ -237,10 +240,11 @@
     grid-template-columns: 100px 100px 100px ;
     justify-content: space-between;
     width: 65%;
+    min-width: 1000px;
 }
 
 .dev{
-    max-width: 341px;
+    max-width: 295px;
 }
 
 

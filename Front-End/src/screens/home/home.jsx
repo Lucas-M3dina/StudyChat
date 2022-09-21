@@ -22,9 +22,9 @@ export default class Cadastro extends Component {
             <nav className='container-header-home'>
                 <img className='logo-header' src={logo} alt="Logo" />
                 <div className="nav-titulo">
-                    <a className='laranja titulo' href="#">Como funciona?</a>
-                    <a className='vinho titulo' href="#">Sobre nós</a>
-                    <Link to="/chat" className='ciano titulo'>Chats</Link>
+                    <a className='laranja titulo-home' href="#">Como funciona?</a>
+                    <a className='vinho titulo-home' href="#">Sobre nós</a>
+                    <Link to="/chat" className='ciano titulo-home'>Chats</Link>
                 </div>
             </nav>
         </header>
