@@ -16,7 +16,7 @@ render()
     return(
     <>
     <div className="header">
-    <img className="logo" src={logo} alt="logo" />
+    <img className="logo" src={logo}  alt="logo" />
     </div>
 
     <div class="chat_window">
@@ -27,12 +27,12 @@ render()
     <ul class="messages"></ul>
       <div class="bottom_wrapper clearfix">
       <div class="message_input_wrapper">
-      <input class="message_input" placeholder="Type your message here..." />
+      <input class="message_input" placeholder="Escreva sua resposta aqui..." />
     </div>
 
     <div class="send_message">
       <div class="icon"></div>
-      <div class="text">Send</div>
+      <div class="text">Enviar</div>
       </div>
     </div>
 

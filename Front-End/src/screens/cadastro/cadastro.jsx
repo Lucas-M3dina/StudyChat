@@ -3,7 +3,6 @@ import logo from '../../assets/logo.png'
 import banner from '../../assets/banner-cadastro-fundo.png'
 import img from '../../assets/undraw-cadastro.png'
 import './cadastro_style.css'
-
 import api from '../../services/api'
 import { Component } from 'react';
 import { Link } from 'react-router-dom'
@@ -13,7 +12,7 @@ export default class Cadastro extends Component {
     super(props)
     this.state = {
       isLoading: false,
-      idTipoUsuario: 1, 
+      idTipoUsuario: 1,  
       nomeUsuario: '',
       email: '',
       senha: '',
@@ -110,14 +109,16 @@ export default class Cadastro extends Component {
 
             <p style={{ color: 'red' }}>{this.state.erroMensagem}</p>
 
-            <button type="submit" className="btn-form">Cadastrar</button>
-          <div className="conta">
-          <Link to="/">Já possuo conta</Link>
+        <button type="submit" className="btn-form">Cadastrar</button>
+        <div className="conta">
+        <Link to="/">Já possuo conta</Link>
         </div>
-          </form>
+        </form>
         </div>
+
         <div className="direita">
-          
+          <image className='logo' src={logo} alt= "logo"/>
+          <image className='banner-direita' src={img} alt="undraw-cadastro"/>
         </div>
       </div>
     );

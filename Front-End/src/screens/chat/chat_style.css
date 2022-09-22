@@ -11,19 +11,25 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100px;
+}
+
+.logo{
+  width: 160px;
+  height: 110px;
 }
 
 .chat_window {
   position: absolute;
   width: calc(100% - 20px);
-  max-width: 800px;
-  height: 500px;
+  max-width: 1024px;
+  height: 600px;
   border-radius: 10px;
   background-color: #fff;
   border-color: #541CA8;
   border-width: 5px;
   left: 50%;
-  top: 50%;
+  top: 57%;
   transform: translateX(-50%) translateY(-50%);
   overflow: hidden;
 }
@@ -45,15 +51,6 @@ body {
   display: inline-block;
   margin-right: 10px;
   position: relative;
-}
-.top_menu .buttons .button.close {
-  background-color: #f5886e;
-}
-.top_menu .buttons .button.minimize {
-  background-color: #fdbf68;
-}
-.top_menu .buttons .button.maximize {
-  background-color: #a3d063;
 }
 .top_menu .title {
   text-align: center;
@@ -158,7 +155,7 @@ body {
   display: inline-block;
   height: 50px;
   border-radius: 25px;
-  border: 1px solid #541CA8;
+  border: 2px solid #541CA8;
   width: calc(100% - 160px);
   position: relative;
   padding: 0 20px;
@@ -177,16 +174,15 @@ body {
   height: 50px;
   display: inline-block;
   border-radius: 50px;
-  background-color: #a3d063;
-  border: 2px solid #a3d063;
+  border: 2px solid #541CA8;
   color: #fff;
   cursor: pointer;
   transition: all 0.2s linear;
   text-align: center;
-  float: right;
+  /* float: right; */
 }
 .bottom_wrapper .send_message:hover {
-  color: #a3d063;
+  color: #541CA8;
   background-color: #fff;
 }
 .bottom_wrapper .send_message .text {

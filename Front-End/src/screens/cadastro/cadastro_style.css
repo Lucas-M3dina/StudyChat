@@ -6,7 +6,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
+} 
 
 .h1-login {
     font-family: 'Single Day' sans-serif;
@@ -40,7 +40,7 @@
 }
 
 .box-body{
-    background-image: url(/src/assets/banner-cadastro-fundo.png);
+    background-image: url(/src/assets/Cadastro.png);
     background-repeat: no-repeat;
     background-size: 100%;
     display: flex;
