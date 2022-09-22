@@ -18,7 +18,7 @@
 
 .txt-left{
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     align-items: center;
     justify-content: space-between;
     height: 500px;
@@ -157,4 +157,39 @@
     width: 32px;
     height: 34px;
     margin-right: 7px;
+}
+
+@media(max-width: 1280px){
+
+    .box-bodyL{
+        background-image: url(/src/assets/login.png);
+    }
+
+    .logo {
+        width: 200px;
+        height: 135px;
+    }
+
+    .txt-left{
+        width: 500px;
+        height: 540px;
+    }
+
+    .txt-left h1 {
+        font-size: 50px;
+    }
+
+    .txt-left p{
+        font-size: 26px;
+    }
+
+    .esquerdaL{
+        margin-top: 15px;
+    }
+    
+    
+    
+    .direitaL form{
+        height: 55%;
+    }
 }
