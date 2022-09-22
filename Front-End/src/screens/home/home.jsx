@@ -7,6 +7,7 @@ import menino from '../../assets/menino-home.png'
 import dev1 from '../../assets/dev1.png'
 import dev2 from '../../assets/dev2.png'
 import dev3 from '../../assets/dev3.png'
+import Bar from '../../assets/bars.svg'
 
 import Footer from '../../components/footer'
 import api from '../../services/api'
@@ -14,14 +15,24 @@ import { Component } from 'react';
 import { Link } from 'react-router-dom'
 
 export default class Cadastro extends Component {
-  
+ 
   render() {
     return (
       <>
         <header className='header-Home'>
             <nav className='container-header-home'>
                 <img className='logo-header' src={logo} alt="Logo" />
-                <div className="nav-titulo">
+                
+                <img className='img-menu' onClick={() => {
+                  var menu = document.getElementById("nav-bar");
+                  if (menu.style.display === "flex") {
+                      menu.style.display = "none"
+                  } else{
+                      menu.style.display = "flex"
+                  }
+                }} src={Bar} alt="botão menu" />
+
+                <div id='nav-bar'>
                     <a className='laranja titulo-home' href="#">Como funciona?</a>
                     <a className='vinho titulo-home' href="#">Sobre nós</a>
                     <Link to="/chat" className='ciano titulo-home'>Chats</Link>

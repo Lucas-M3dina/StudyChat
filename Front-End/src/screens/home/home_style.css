@@ -6,6 +6,10 @@
     text-decoration: none;
 }
 
+.img-menu{
+    display: none;
+}
+
 .laranja{
     color: #FF5D05;
     min-width: 236px;
@@ -40,7 +44,7 @@
     align-items: center;
 }
 
-.nav-titulo{
+#nav-bar{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -268,4 +272,45 @@ footer{
     font-size: 20px;
     text-align: center;
     color: #FFFFFF;
+}
+
+
+@media(max-width: 1280px){
+
+    .texto-como_funciona {
+        font-size: 22px;
+    }
+
+    .astronauta{
+        width: 400px;
+    }
+
+    .nuvem-azul {
+        padding: 133px 150px 300px 150px;
+    }
+
+    .et{
+        width: 525px;
+    }
+
+    .texto-nuvem-azul{
+        font-size: 28px;
+    }
+
+
+
+    .nuvem-amarela{
+        padding: 133px 150px 300px 150px;
+    }
+}
+
+@media(max-width: 770px){
+    .img-menu{
+        display: unset;
+        width: 30px;
+    }
+
+    #nav-bar{
+        display: none;
+    }
 }
