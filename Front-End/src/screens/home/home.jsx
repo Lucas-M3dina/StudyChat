@@ -24,7 +24,7 @@ export default class Cadastro extends Component {
                 <img className='logo-header' src={logo} alt="Logo" />
                 
                 <img className='img-menu' onClick={() => {
-                  var menu = document.getElementById("nav-bar");
+                  var menu = document.getElementById("nav-bar-responsivo");
                   if (menu.style.display === "flex") {
                       menu.style.display = "none"
                   } else{
@@ -37,10 +37,17 @@ export default class Cadastro extends Component {
                     <a className='vinho titulo-home' href="#">Sobre nós</a>
                     <Link to="/chat" className='ciano titulo-home'>Chats</Link>
                 </div>
+
+                <div id='nav-bar-responsivo'>
+                    <a className='laranja titulo-home' href="#">Como funciona?</a>
+                    <a className='vinho titulo-home' href="#">Sobre nós</a>
+                    <Link to="/chat" className='ciano titulo-home'>Chats</Link>
+                </div>
+
             </nav>
         </header>
 
-        <main>
+        <main className='main-home'>
             <section className="container-banner-home">
             <span className="titulo-banner-home">BEM VINDO A NOSSA PLATAFORMA</span>
             <span className="titulo-banner-home">PARA ACESSAR SEUS CHATS</span>
@@ -71,9 +78,9 @@ export default class Cadastro extends Component {
             <section className="desenvolvedores">
               <h2 className="titulo-desenvolvedores"> Conheça nossos desenvolvedores</h2>
               <div className="container-desenvolvedores">
-                <img src={dev1} alt="Desenvolvedor" className="dev" />
-                <img src={dev2} alt="Desenvolvedor" className="dev" />
-                <img src={dev3} alt="Desenvolvedor" className="dev" />
+                <img src={dev1} alt="Desenvolvedor" className="dev dev1" />
+                <img src={dev2} alt="Desenvolvedor" className="dev dev2" />
+                <img src={dev3} alt="Desenvolvedor" className="dev dev1" />
               </div>
             </section>
         </main>
