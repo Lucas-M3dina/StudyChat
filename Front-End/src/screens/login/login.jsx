@@ -67,7 +67,7 @@ export default class Login extends Component {
       <div className="box-bodyL">
         <div className="esquerdaL">
           <div className="txt-left">
-          <img className="logo" src={logo} alt="logo" />
+          <img className="logo-lg" src={logo} alt="logo" />
           <h1>Seu parceiro de estudos!</h1>
 
           <p>Otimize sua rotina de estudos e faça testes ainda mais intuitivos, utiizando uma nova maneira de pensar com nossos serviços.

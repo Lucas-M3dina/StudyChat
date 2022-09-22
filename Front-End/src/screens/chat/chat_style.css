@@ -3,7 +3,6 @@
 }
 
 body {
-  background-color: #F9F2ED;
   font-family: "Calibri", "Roboto", sans-serif;
 }
 
@@ -31,7 +30,7 @@ body {
   left: 50%;
   top: 57%;
   transform: translateX(-50%) translateY(-50%);
-  overflow: hidden;
+  
 }
 
 .top_menu {
@@ -199,4 +198,4 @@ body {
   pre {
     background-color: #f0f0f0;
     margin-left: 20px;
-  }
+  } 
