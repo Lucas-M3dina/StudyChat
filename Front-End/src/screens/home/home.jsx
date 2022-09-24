@@ -35,13 +35,13 @@ export default class Cadastro extends Component {
                 <div id='nav-bar'>
                     <a className='laranja titulo-home' href="#">Como funciona?</a>
                     <a className='vinho titulo-home' href="#">Sobre nós</a>
-                    <Link to="/chat" className='ciano titulo-home'>Chats</Link>
+                    <Link to="/meuschats" className='ciano titulo-home'>Chats</Link>
                 </div>
 
                 <div id='nav-bar-responsivo'>
                     <a className='laranja titulo-home' href="#">Como funciona?</a>
                     <a className='vinho titulo-home' href="#">Sobre nós</a>
-                    <Link to="/chat" className='ciano titulo-home'>Chats</Link>
+                    <Link to="/meuschats" className='ciano titulo-home'>Chats</Link>
                 </div>
 
             </nav>
@@ -51,7 +51,7 @@ export default class Cadastro extends Component {
             <section className="container-banner-home">
             <span className="titulo-banner-home">BEM VINDO A NOSSA PLATAFORMA</span>
             <span className="titulo-banner-home">PARA ACESSAR SEUS CHATS</span>
-            <Link to="/chat" className='btn-banner-home'>CLIQUE AQUI</Link>
+            <Link to="/meuschats" className='btn-banner-home'>CLIQUE AQUI</Link>
             </section>
 
             <section className="como_funciona">
