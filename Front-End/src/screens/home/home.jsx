@@ -42,7 +42,7 @@ export default class Cadastro extends Component {
                     <a className='laranja titulo-home' href="#">Como funciona?</a>
                     <a className='vinho titulo-home' href="#">Sobre nós</a>
                     <Link to="/meuschats" className='ciano titulo-home'>Chats</Link>
-                </div>
+                </div> 
 
             </nav>
         </header>

@@ -1,9 +1,16 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&family=Titillium+Web:wght@600&display=swap');
+
+*{
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
-body {
-  font-family: "Calibri", "Roboto", sans-serif;
+.body-chat{
+  color: #F9F2ED;
 }
 
 .header{
@@ -17,7 +24,7 @@ body {
   width: 160px;
   height: 110px;
 }
-
+ 
 .chat_window {
   position: absolute;
   width: calc(100% - 20px);
@@ -142,11 +149,13 @@ body {
 }
 
 .bottom_wrapper {
-  position: relative;
   width: 100%;
   background-color: #fff;
   padding: 20px 20px;
-  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   bottom: 0;
 }
 .bottom_wrapper .message_input_wrapper {

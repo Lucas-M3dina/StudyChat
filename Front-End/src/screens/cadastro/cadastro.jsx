@@ -75,12 +75,14 @@ export default class Cadastro extends Component {
     return (
       <div className='box-body'>
         <div className="esquerda">
+
+          <img className='logo' src={logo} alt= "logo"/>
           <form action="submit" onSubmit={this.cadastrarUsuario}>
           <h1 className="h1-login">Cadastro</h1>
 
           <div className='imput-choose' >
-          <button type="submit" className='btn-choose' >Professor</button>
-          <button type="submit" className='btn-choose' >Aluno</button>
+          <acto className='btn-choose' >Professor</acto>
+          <acto className='btn-choose' >Aluno</acto>
           </div>
 
             <input type="text" placeholder="Nome de Usuário"
@@ -92,7 +94,7 @@ export default class Cadastro extends Component {
             <input type="text" placeholder="Série"
               name='Serie'
               onChange={this.atualizaStateCampo}
-              value={this.state.nomeUsuario}
+              value={this.state.serie}
             />
 
             <input type="email" placeholder="Email"
@@ -109,16 +111,17 @@ export default class Cadastro extends Component {
 
             <p style={{ color: 'red' }}>{this.state.erroMensagem}</p>
 
-        <button type="submit" className="btn-form">Cadastrar</button>
-        <div className="conta">
+        <button type="submit" className="btn-form">Cadastrar
+        </button>
+        <div className="conta"> 
         <Link to="/">Já possuo conta</Link>
         </div>
         </form>
         </div>
 
         <div className="direita">
-          <image className='logo' src={logo} alt= "logo"/>
-          <image className='banner-direita' src={img} alt="undraw-cadastro"/>
+            <img className='logo-reg' src={logo} alt= "logo"/>
+            <img className='banner-direita' src={img} alt="undraw-cadastro"/>
         </div>
       </div>
     );

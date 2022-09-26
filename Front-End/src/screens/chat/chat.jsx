@@ -14,9 +14,7 @@ export default class Chat extends Component{
 render()
 {
     return(
-    <>
-
-    <body >
+    <div className="body-chat">
     <div className="header">
     <img className="logo" src={logo}  alt="logo" />
     </div>
@@ -50,9 +48,7 @@ render()
     </li>
       <button className="botao-sair" >DESISTIR</button>
     </div>
-    </body>
-    </>
-
+    </div>
     )
 }
 
@@ -92,7 +88,7 @@ function () {
           message_side = message_side === 'left' ? 'right' : 'left';
           message = new Message({
               text: text,
-              message_side: message_side
+              message_side: message_side 
           });
           message.draw();
           return $messages.animate({ scrollTop: $messages.prop('scrollHeight') }, 300);
