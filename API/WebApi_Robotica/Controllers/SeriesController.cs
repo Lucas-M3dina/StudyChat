@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApi_Robotica.Interfaces;
+using WebApi_Robotica.Utils;
 
 namespace WebApi_Robotica.Controllers
 {
@@ -27,6 +28,8 @@ namespace WebApi_Robotica.Controllers
         {
             try
             {
+                Email e = new();
+                e.SendEmail("nunesferreirawilliam@gmail.com");
                 return Ok(_serieRepository.Listar());
 
             }
