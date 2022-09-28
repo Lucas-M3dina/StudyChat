@@ -6,6 +6,8 @@ import './cadastro_style.css'
 import api from '../../services/api'
 import { Component } from 'react';
 import { Link } from 'react-router-dom'
+// import '../css/Reset.css'
+// import './css/Forms.css';
 
 export default class Cadastro extends Component {
   constructor(props) {
@@ -91,11 +93,14 @@ export default class Cadastro extends Component {
               value={this.state.nomeUsuario}
             />
 
-            <input type="text" placeholder="Série"
-              name='Serie'
-              onChange={this.atualizaStateCampo}
-              value={this.state.serie}
-            />
+            {/* <select onChange={campo => setidEstado(campo.target.value)} className="small_input" name="select_series" required>
+              <option value="0">Selecione uma série</option>
+                {estados.map(estado => {
+                  return (
+                    <option value={Serie.Estudante}>{Serie.Estudante}</option>
+                  )
+                })}
+            </select> */}
 
             <input type="email" placeholder="Email"
               name='email'
