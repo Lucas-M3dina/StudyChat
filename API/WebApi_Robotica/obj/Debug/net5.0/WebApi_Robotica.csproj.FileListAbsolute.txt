@@ -304,7 +304,6 @@ C:\Users\Aluno\Desktop\Medina\Robotica\API\WebApi_Robotica\obj\Debug\net5.0\ref\
 C:\Users\Aluno\Desktop\Medina\Robotica\API\WebApi_Robotica\obj\Debug\net5.0\WebApi_Robotica.xml
 C:\Users\Aluno\Desktop\Medina\Robotica\API\WebApi_Robotica\obj\Debug\net5.0\WebApi_Robotica.pdb
 C:\Users\Aluno\Desktop\Medina\Robotica\API\WebApi_Robotica\obj\Debug\net5.0\WebApi_Robotica.genruntimeconfig.cache
-C:\Users\Aluno\Desktop\Medina\Robotica\API\WebApi_Robotica\obj\Debug\net5.0\refint\WebApi_Robotica.dll
 C:\Users\Aluno\Desktop\Medina\Robotica\API\WebApi_Robotica\bin\Debug\net5.0\MailKit.dll
 C:\Users\Aluno\Desktop\Medina\Robotica\API\WebApi_Robotica\bin\Debug\net5.0\MimeKit.dll
 C:\Users\Aluno\Desktop\Medina\Robotica\API\WebApi_Robotica\bin\Debug\net5.0\BouncyCastle.Crypto.dll
@@ -314,3 +313,5 @@ C:\Users\Aluno\Desktop\Medina\Robotica\API\WebApi_Robotica\bin\Debug\net5.0\Syst
 C:\Users\Aluno\Desktop\Medina\Robotica\API\WebApi_Robotica\bin\Debug\net5.0\System.Text.Encoding.CodePages.dll
 C:\Users\Aluno\Desktop\Medina\Robotica\API\WebApi_Robotica\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\System.Security.Cryptography.Pkcs.dll
 C:\Users\Aluno\Desktop\Medina\Robotica\API\WebApi_Robotica\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+C:\Users\Aluno\Desktop\Medina\Robotica\API\WebApi_Robotica\bin\Debug\net5.0\ref\WebApi_Robotica.dll
+C:\Users\Aluno\Desktop\Medina\Robotica\API\WebApi_Robotica\obj\Debug\net5.0\staticwebassets\WebApi_Robotica.StaticWebAssets.xml
