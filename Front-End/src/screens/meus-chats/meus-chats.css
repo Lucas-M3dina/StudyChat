@@ -9,6 +9,37 @@
     padding: 0; 
 }
 
+.centralizar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tit{
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 207px;
+    letter-spacing: 2px;
+    color: #020f24;
+}
+
+.btn-estilo{
+    padding: 7px 30px !important;
+    font-size: 22px !important;
+    margin-top: 10px;
+}
+
+.form-control,.form-select{
+    margin: 10px 0;
+}
+
+.questionario{
+    width: 600px;
+}
+
 .header-meusChats{
     height: 90px;
     display: flex;
@@ -50,7 +81,7 @@
 .container-card{
     padding-top: 150px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     width: 1144px;
     margin: 0 auto;
 }
