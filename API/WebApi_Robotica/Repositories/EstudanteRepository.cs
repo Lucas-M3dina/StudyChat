@@ -27,6 +27,19 @@ namespace WebApi_Robotica.Repositories
             return ctx.Estudantes.FirstOrDefault(p => p.IdUsuario == id);
         }
 
+        public bool BuscarPorEmail(string email)
+        {
+            var e = ctx.Estudantes.FirstOrDefault(p => p.IdUsuarioNavigation.Email == email);
+            if (e == null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         public void Cadastrar(Estudante user)
         {
             user.IdUsuarioNavigation.Senha = Cripto.GerarHash(user.IdUsuarioNavigation.Senha);

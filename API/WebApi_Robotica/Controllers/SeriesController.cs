@@ -28,8 +28,6 @@ namespace WebApi_Robotica.Controllers
         {
             try
             {
-                Email e = new();
-                e.SendEmail("nunesferreirawilliam@gmail.com");
                 return Ok(_serieRepository.Listar());
 
             }

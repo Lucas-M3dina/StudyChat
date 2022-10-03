@@ -77,5 +77,18 @@ namespace CloudPlanning_WebApi.Repositories
             }
             return null;
         }
+
+        public bool BuscarPorEmail(string email)
+        {
+            var e = ctx.Usuarios.FirstOrDefault(p => p.Email == email);
+            if (e == null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }

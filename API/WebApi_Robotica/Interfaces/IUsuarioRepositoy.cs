@@ -48,6 +48,8 @@ namespace WebApi_Robotica.Interfaces
         /// <param name="user">usuário que será cadastrado</param>
         /// <returns>Um usuário cadastrado</returns>
         public void Cadastrar(Usuario user);
+
+        public bool BuscarPorEmail(string email);
     }
 }
 

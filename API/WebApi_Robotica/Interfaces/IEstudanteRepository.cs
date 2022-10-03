@@ -23,5 +23,7 @@ namespace WebApi_Robotica.Interfaces
         Estudante BuscarPorId(int id);
 
         public Estudante BuscarPorIdUser(int id);
+
+        public bool BuscarPorEmail(string email);
     }
 }

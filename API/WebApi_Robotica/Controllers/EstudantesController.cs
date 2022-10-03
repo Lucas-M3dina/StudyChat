@@ -15,10 +15,12 @@ namespace WebApi_Robotica.Controllers
     public class EstudantesController : Controller
     {
         private readonly IEstudanteRepository _estudanteRepository;
+        private readonly IUsuarioRepository _usuarioRepository;
 
-        public EstudantesController(IEstudanteRepository contexto)
+        public EstudantesController(IEstudanteRepository contexto, IUsuarioRepository ctx )
         {
             _estudanteRepository = contexto;
+            _usuarioRepository = ctx;
         }
 
 
@@ -27,12 +29,19 @@ namespace WebApi_Robotica.Controllers
         {
             try
             {
+                novouser.IdUsuarioNavigation.IdTipoUsuario = 2;
+
                 string email = novouser.IdUsuarioNavigation.Email.Split("@")[1].ToLower();
                 if (email == "portalsesisp.org.br")
                 {
-                    _estudanteRepository.Cadastrar(novouser);
+                    if (!_usuarioRepository.BuscarPorEmail(novouser.IdUsuarioNavigation.Email))
+                    {
+                        _estudanteRepository.Cadastrar(novouser);
 
-                    return StatusCode(201);
+                        return StatusCode(201);
+                    }
+
+                    return StatusCode(500, "Email ja está em uso");
                 }
 
                 return StatusCode(500, "Email não pertence ao SESI");
