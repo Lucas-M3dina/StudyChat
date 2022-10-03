@@ -33,7 +33,7 @@ export default class MeusChats extends Component {
                 <h1 className="titulo">Meus Chats</h1>
                 <img src={LinhaDireita} alt="Linha Direita decorativa" className="linha" />
             </section>
-
+ 
             <section className="container-card">
                 <div className="card-lp card-config">
                     <h2 className="titulo-materia">Linguagem</h2>
