@@ -171,33 +171,5 @@ cd WebApi_Robotica
 <br>
 
 
-## <p align="center">Equipe
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-<br>
 
-<table align="center">
-  <tr>
-    <th>Integrantes</th>
-    <th>Função</th>
-    <th>Github</th>
-    <th>Email</th>
-    <th>Linkedin</th>
-  </tr>
-  <tr>
-    <td>Lucas Medina</td>
-	<td>Programador FullStack</td>
-    <td> <a href="https://github.com/Lucas-M3dina"> <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /> </a></td>
-	<td> <a href="mailto:lucas.m3dina@gmail.com"> <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /> </a></td>
-	<td> <a href="https://www.linkedin.com/in/lucas-m3dina/"> <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" /> </a></td>
-  </tr>
-  <tr>
-    <td>William Ferreira</td>
-	<td>Programador FullStack</td>
-    <td> <a href="https://github.com/ferreirawill05"> <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /> </a></td>
-	<td> <a href="mailto:william.ferreira@outlook.com.br"> <img src="https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" /> </a></td>
-	<td> <a href="https://www.linkedin.com/in/williamferreira-developer/"> <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" /> </a></td>
-  </tr>
-</table>
+
