@@ -54,7 +54,7 @@ export default class Cadastro extends Component {
               <span className="titulo-banner-home">BEM VINDO A NOSSA PLATAFORMA</span>
               <span className="titulo-banner-home">PARA ACESSAR SEUS CHATS</span>
               <Link to={ () => {
-                if (parseJWT().role === 2) {
+                if (parseJWT().role === 1) {
                   return '/meuschats'
                 }
                 else{
