@@ -99,55 +99,6 @@ export default class MeusChats extends Component {
   }
 
   render() {
-<<<<<<< HEAD
-    return (
-      <>
-        <header className="header-meusChats">
-           <Link to="/home"> <img src={Logo} alt="Logo" className="logo-header" /> </Link> 
-        </header>
-
-        <main className="main-meusChats">
-            <section className="container-titulo">
-                <img src={LinhaEsquerda} alt="linha Esquerda decorativa" className="linha" />
-                <h1 className="titulo">Meus Chats</h1>
-                <img src={LinhaDireita} alt="Linha Direita decorativa" className="linha" />
-            </section>
- 
-            <section className="container-card">
-                <div className="card-lp card-config">
-                    <h2 className="titulo-materia">Linguagem</h2>
-                    <span className="questao">Questões:</span>
-                    <span className="quantidadeQuestoes">10</span>
-                    <Link className="btn-comecar">COMEÇAR</Link>
-                </div>
-
-                <div className="card-mat card-config">
-                    <h2 className="titulo-materia">Matematica</h2>
-                    <span className="questao">Questões:</span>
-                    <span className="quantidadeQuestoes">10</span>
-                    <Link className="btn-comecar">COMEÇAR</Link>
-                </div>
-
-                <div className="card-cien card-config">
-                    <h2 className="titulo-materia">Ciências</h2>
-                    <span className="questao">Questões:</span>
-                    <span className="quantidadeQuestoes">10</span>
-                    <Link className="btn-comecar">COMEÇAR</Link>
-                </div>
-
-                <div className="card-artes card-config">
-                    <h2 className="titulo-materia">Artes</h2>
-                    <span className="questao">Questões:</span>
-                    <span className="quantidadeQuestoes">10</span>
-                    <Link className="btn-comecar">COMEÇAR</Link>
-                </div>
-
-            </section>
-        </main>
-
-      </>
-    );
-=======
     if (usuarioAutenticacao()) {
       
     
@@ -259,6 +210,5 @@ export default class MeusChats extends Component {
         window.location.href = '/'
       );
     }
->>>>>>> d3f94d08ce1e146e975d854286b452d3b1c02786
   }
 }
