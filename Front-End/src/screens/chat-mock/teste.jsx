@@ -85,7 +85,7 @@ class SimpleForm extends Component {
           this.setState({ questionarios: resposta.data});
           console.log(this.state.questionarios);
           this.state.questionarios.map(q => {
-            this.state.test.push({ value: q.materia, label: q.assunto, trigger: '5' })
+            this.state.test.push({ value: q.idQuestionario, label: q.assunto, trigger: '5' })
           })
         }
       })
@@ -163,82 +163,11 @@ class SimpleForm extends Component {
             ],
           },
 
-          {
-            id: 'age',
-            user: true,
-            trigger: '7',
-            validator: (value) => {
-              if (isNaN(value)) {
-                return 'value must be a number';
-              } else if (value < 0) {
-                return 'value must be positive';
-              } else if (value > 120) {
-                return `${value}? Come on!`;
-              }
-
-              return true;
-            },
-          },
-          {
-            id: '7',
-            message: 'Great! Check out your summary',
-            trigger: 'review',
-          },
-          {
-            id: 'review',
-            component: <Review />,
-            asMessage: true,
-            trigger: 'update',
-          },
-          {
-            id: 'update',
-            message: 'Would you like to update some field?',
-            trigger: 'update-question',
-          },
-          {
-            id: 'update-question',
-            options: [
-              { value: 'yes', label: 'Yes', trigger: 'update-yes' },
-              { value: 'no', label: 'No', trigger: 'end-message' },
-            ],
-          },
-          {
-            id: 'update-yes',
-            message: 'What field would you like to update?',
-            trigger: 'update-fields',
-          },
-          {
-            id: 'update-fields',
-            options: [
-              { value: 'name', label: 'Name', trigger: 'update-name' },
-              { value: 'gender', label: 'Gender', trigger: 'update-gender' },
-              { value: 'age', label: 'Age', trigger: 'update-age' },
-            ],
-          },
-          {
-            id: 'update-name',
-            update: 'name',
-            trigger: '7',
-          }, 
-          {
-            id: 'update-gender',
-            update: 'gender',
-            trigger: '7',
-          },
-          {
-            id: 'update-age',
-            update: 'age',
-            trigger: '7',
-          },
-          {
-            id: 'end-message',
-            message: 'Thanks! Your data was submitted successfully!',
-            end: true,
-          },
         ]}
       />
     );
   }
 }
+//ideia fixar o numero de questões assim teriamos um fluxo construido alterando apenas os enunciados e questoes
 
 export default SimpleForm;
