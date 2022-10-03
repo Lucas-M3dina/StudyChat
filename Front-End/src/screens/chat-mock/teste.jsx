@@ -13,7 +13,6 @@ class Review extends Component {
     this.state = {
       materia: '',
       sentimento: '',
-      questionarios: [],
     };
   }
 
@@ -24,26 +23,7 @@ class Review extends Component {
     this.setState({ materia, sentimento});
   }
 
-  salvarQuestionarios = (event) => {
-
-    const token = {
-      headers: {
-         Authorization: "Bearer " + localStorage.getItem('usuario-login')
-      }
-   }
-
-    api.get('api/questionarios', token)
-
-      .then(resposta => {
-        if (resposta.status === 200) {
-          console.log(resposta.data);
-          this.questionarios = resposta.data
-        }
-      })
-      .catch(() => {
-        console.log('algo deu ruim viado');
-      })
-  }
+  
 
   render() {
     const { materia, sentimento} = this.state;
@@ -78,6 +58,47 @@ Review.defaultProps = {
 };
 
 class SimpleForm extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      materia: '',
+      sentimento: '',
+      questionarios: [],
+      test: [],
+
+    };
+  }
+
+  salvarQuestionarios = (event) => {
+
+    const token = {
+      headers: {
+         Authorization: "Bearer " + localStorage.getItem('usuario-login')
+      }
+   }
+
+    api.get('api/questionarios', token)
+
+      .then(resposta => {
+        if (resposta.status === 200) {
+          this.setState({ questionarios: resposta.data});
+          console.log(this.state.questionarios);
+          this.state.questionarios.map(q => {
+            this.state.test.push({ value: q.materia, label: q.assunto, trigger: '5' })
+          })
+        }
+      })
+      .catch(() => {
+        console.log('algo deu ruim ');
+      })
+  }
+
+  componentDidMount(){
+    
+    this.salvarQuestionarios()
+  }
+  
   render() {
     return (
       <ChatBot
@@ -90,15 +111,11 @@ class SimpleForm extends Component {
 
           {
             id: 'materia',
-            options: [
-              { value: 'Matemática', label: 'Matemática', trigger: '5' },
-              { value: 'Linguagens', label: 'Liguagens', trigger: '5' },
-              { value: 'Ciências da natureza', label: 'Ciências da natureza', trigger: '5' },
-              { value: 'Artes', label: 'Artes', trigger: '5' },
-              { value: 'História', label: 'História', trigger: '5' },
-              { value: 'Geografia', label: 'Geografia', trigger: '5' },
-            ],
+            
+            options: this.state.test
           },
+            
+          
           
           {
             id: '5',
