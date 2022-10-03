@@ -15,49 +15,84 @@ export default class Cadastro extends Component {
     super(props)
     this.state = {
       isLoading: false,
-      idTipoUsuario: 1,  
-      nomeUsuario: '',
+      idSerie: 0, 
+      series: [],
+      nome: '',
       email: '',
       senha: '',
-      cadastroMensagem: "",
+      materia: '',
       erroMensagem: "",
-      idUsuario: 0
+      idUsuario: 0,
+      tipoUser: 0,
     };
   };
 
-  cadastrarUsuario = (event) => {
+  cadastrarAluno = (event) => {
     event.preventDefault();
 
-    this.setState({ cadastroMensagem: "", isLoading: true })
+    this.setState({ erroMensagem: "", isLoading: true })
 
-    api.post('/api/Usuarios', {
-      nomeUsuario: this.state.nomeUsuario,
-      idTipoUsuario: this.state.idTipoUsuario,
-      email: this.state.email,
-      senha: this.state.senha
+    api.post('/api/Estudantes', {
+      nome: this.state.nome,
+      idSerie: this.state.idSerie,
+      idUsuarioNavigation: {
+        email: this.state.email,
+        senha: this.state.senha,
+      }
+      
     })
 
-    // api.post('https://localhost:5000/api/Usuarios', [
-    //   //validação dos dados
-    //   body('username').isEmail(),
-    //   body('password').isLength({ min: 5 })
-    // ], (req, res) => {
-    //   // caso encontre erros, ficará nessa variável errors
-    //   const errors = validationResult(req);
-    //   if (!errors.isEmpty()) {
-    //     return res.status(400).json({ errors: errors.array() });
-    //   }
-
       .then(resposta => {
-        if (resposta.status === 200) {
-          localStorage.setItem('usuario-cadastro', resposta.data.token);
+        if (resposta.status === 201) {
           this.setState({ isLoading: false });
-          this.props.history.push('/');
+          this.setState({ erroMensagem: "Cadastrado com sucesso" });
+
+          this.props.history.push("/")
         }
       })
-      .catch(() => {
-        this.setState({ erroMensagem: "Este email já está em uso, tente novamente.", isLoading: false });
+      .catch((error) => {
+        this.setState({ erroMensagem: error.response.data, isLoading: false });
       })
+  }
+
+  cadastrarProfessor = (event) => {
+    event.preventDefault();
+
+    this.setState({ erroMensagem: "", isLoading: true })
+
+    api.post('/api/Professores', {
+      nome: this.state.nome,
+      materia: this.state.materia,
+      idUsuarioNavigation: {
+        email: this.state.email,
+        senha: this.state.senha,
+      }
+      
+    })
+    
+      .then(resposta => {
+        if (resposta.status === 201) {
+          this.setState({ isLoading: false });
+          this.setState({ erroMensagem: "Cadastrado com sucesso" });
+
+          this.props.history.push("/")
+        }
+      })
+      .catch((error) => {
+        console.log(error.response.data);
+        this.setState({ erroMensagem: error.response.data, isLoading: false });
+      })
+  }
+
+  listarSerie = (e) => {
+    api.get('/api/series')
+    .then(resposta => {
+      if (resposta.status === 200) {
+        this.setState({ series: resposta.data});
+        console.log(this.state.series);
+      }
+    })
+    
   }
 
 
@@ -68,62 +103,148 @@ export default class Cadastro extends Component {
 
   limparCampos = () => {
     this.setState({
-      nomeUsuario: '',
+      nome: '',
       email: '',
       senha: '',
+      materia: '',
+      erroMensagem: "",
+      materia: '',
+      idSerie: 0, 
     })
   };
+
+  componentDidMount(){
+    this.listarSerie()
+  }
 
   render() {
     if (!usuarioAutenticacao()) {
       return (
         <div className='box-body'>
           <div className="esquerda">
-  
-            <img className='logo' src={logo} alt= "logo"/>
-            <form action="submit" onSubmit={this.cadastrarUsuario}>
-            <h1 className="h1-login">Cadastro</h1>
-  
-            <div className='imput-choose' >
-            <acto className='btn-choose' >Professor</acto>
-            <acto className='btn-choose' >Aluno</acto>
-            </div>
-  
-              <input type="text" placeholder="Nome de Usuário"
-                name='nomeUsuario'
-                onChange={this.atualizaStateCampo}
-                value={this.state.nomeUsuario}
-              />
-  
-              {/* <select onChange={campo => setidEstado(campo.target.value)} className="small_input" name="select_series" required>
-                <option value="0">Selecione uma série</option>
-                  {estados.map(estado => {
-                    return (
-                      <option value={Serie.Estudante}>{Serie.Estudante}</option>
-                    )
+              <img className='logo' src={logo} alt= "logo"/>
+            <div className="esquerda-form">
+
+              <h1 className="h1-login">Cadastro</h1>
+
+              <div className='imput-choose' >
+              <button onClick={() => {
+                this.limparCampos()
+                var alunoInput = document.getElementById("aluno");
+                var professorInput = document.getElementById("professor");
+                var btnProfessor = document.getElementById("btn-professor");
+                var btnAluno = document.getElementById("btn-aluno");
+
+                  alunoInput.style.display = "none"
+                  professorInput.style.display = "flex"
+
+                  btnAluno.style.border = "unset"
+                  btnProfessor.style.border = "solid 2px #000000"
+                
+              }} id='btn-professor' className='btn-choose' >Professor</button>
+
+              <button onClick={() => {
+                this.limparCampos()
+                var alunoInput = document.getElementById("aluno");
+                var btnAluno = document.getElementById("btn-aluno");
+                var professorInput = document.getElementById("professor");
+                var btnProfessor = document.getElementById("btn-professor");
+                  
+                  alunoInput.style.display = "flex"
+                  professorInput.style.display = "none"
+
+                  btnProfessor.style.border = "unset"
+                  btnAluno.style.border = "solid 2px #000000"
+          
+              }} id="btn-aluno" className='btn-choose' >Aluno</button>
+              </div>
+
+              <form id='aluno' className='formulario' action="submit" onSubmit={this.cadastrarAluno}>
+
+
+                <input type="text" placeholder="Nome"
+                  name='nome'
+                  onChange={this.atualizaStateCampo}
+                  value={this.state.nome}
+                />
+
+                <select className="select-classe" onChange={this.atualizaStateCampo} name="idSerie" required>
+                  <option value="0">Selecione uma sala</option>
+                  {this.state.series.map(s => {
+                      return (
+                          <option value={s.idSerie}>{s.sala}</option>
+                      )
                   })}
-              </select> */}
-  
-              <input type="email" placeholder="Email"
-                name='email'
-                onChange={this.atualizaStateCampo}
-                value={this.state.email}
-              />
-  
-              <input type="password" placeholder="Senha"
-                name='senha'
-                onChange={this.atualizaStateCampo}
-                value={this.state.senha}
-              />
-  
-              <p style={{ color: 'red' }}>{this.state.erroMensagem}</p>
-  
-          <button type="submit" className="btn-form">Cadastrar
-          </button>
-          <div className="conta"> 
-          <Link to="/">Já possuo conta</Link>
-          </div>
-          </form>
+                </select>
+
+                <input type="email" placeholder="Email"
+                  name='email'
+                  onChange={this.atualizaStateCampo}
+                  value={this.state.email}
+                />
+
+                <input type="password" placeholder="Senha"
+                  name='senha'
+                  onChange={this.atualizaStateCampo}
+                  value={this.state.senha}
+                />
+
+                <p style={{ color: 'red' }}>{this.state.erroMensagem}</p>
+
+              <button type="submit" className="btn-form">Cadastrar</button>
+              <div className="conta"> 
+              <Link to="/">Já possuo conta</Link>
+              </div>
+              </form>
+
+              <form id='professor' className='formulario' action="submit" onSubmit={this.cadastrarProfessor}>
+
+
+                <input type="text" placeholder="Nome"
+                  name='nome'
+                  onChange={this.atualizaStateCampo}
+                  value={this.state.nome}
+                />
+
+                <select className="select-classe" onChange={this.atualizaStateCampo} name="materia" required>
+                  <option value="0">Selecione uma materia</option>
+                          <option value="Matematica">Matemática</option>
+                          <option value="Lingua Portuguesa">Língua Portuguesa</option>
+                          <option value="Biologia">Biologia</option>
+                          <option value="Quimica">Química</option>
+                          <option value="Fisica">Física</option>
+                          <option value="Educacao Fisica">Educação Fisica</option>
+                          <option value="Ingles">Inglês</option>
+                          <option value="Historia">História</option>
+                          <option value="Geografia">Geografia</option>
+                          <option value="Sociologia">Sociologia</option>
+                          <option value="Filosofia">Filosofia</option>
+                          <option value="Arte">Arte</option>
+                          <option value="Programacao e Robotica">Programação e Robótica</option>
+                          <option value="Eixo">Eixo</option>
+                </select>
+
+                <input type="email" placeholder="Email"
+                  name='email'
+                  onChange={this.atualizaStateCampo}
+                  value={this.state.email}
+                />
+
+                <input type="password" placeholder="Senha"
+                  name='senha'
+                  onChange={this.atualizaStateCampo}
+                  value={this.state.senha}
+                />
+
+                <p style={{ color: 'red' }}>{this.state.erroMensagem}</p>
+
+              <button type="submit" className="btn-form">Cadastrar</button>
+              <div className="conta"> 
+              <Link to="/">Já possuo conta</Link>
+              </div>
+              </form>
+            </div>
+            
           </div>
   
           <div className="direita">

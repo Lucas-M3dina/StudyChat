@@ -44,9 +44,7 @@ export default class MeusChats extends Component {
         console.log(this.state.series);
       }
     })
-    .catch(() => {
-      this.setState({ erroMensagem: "Este email já está em uso, tente novamente.", isLoading: false });
-    })
+    
   }
 
   salvarQuestionarios = (event) => {
@@ -104,7 +102,7 @@ export default class MeusChats extends Component {
     if (usuarioAutenticacao()) {
       
     
-      if (parseJWT().role === 2) {
+      if (parseJWT().role === 1) {
         
       
       return (
