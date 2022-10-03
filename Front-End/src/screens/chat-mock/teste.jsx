@@ -14,6 +14,7 @@ class Review extends Component {
       materia: '',
       sentimento: '',
       questionarios: [],
+      test: [],
     };
   }
 
@@ -158,7 +159,6 @@ class SimpleForm extends Component {
               } else if (value > 120) {
                 return `${value}? Come on!`;
               }
-
               return true;
             },
           },
