@@ -36,17 +36,17 @@ export default class Login extends Component {
 
           switch (parseJWT().role) {
             case "1":
-              this.props.history.push("/chat")
+              this.props.history.push("/home")
               console.log("estou logado: " + usuarioAutenticacao())
               break;
 
             case "2":
-              this.props.history.push("/chat")
+              this.props.history.push("/home")
               console.log("estou logado: " + usuarioAutenticacao())
               break;
 
             default:
-              this.props.history.push("/chat") //alterar a coisinha aqui
+              this.props.history.push("/home") //alterar a coisinha aqui
               break;
           }
         }
@@ -63,50 +63,58 @@ export default class Login extends Component {
 
 
   render() {
-    return (
-      <div className="box-bodyL">
-        <div className="esquerdaL">
-          <div className="txt-left">
-          <img className="logo-lg" src={logo} alt="logo" />
-          <h1>Seu parceiro de estudos!</h1>
-
-          <p>Otimize sua rotina de estudos e faça testes ainda mais intuitivos, utiizando uma nova maneira de pensar com nossos serviços.
-          </p>
-          <p>Acesse nossa plataforma e explore os  limites do seu conhecimento, entre na sua sala e mostre quem manda!
-          </p>
+    if (!usuarioAutenticacao()) {
+      return (
+        <div className="box-bodyL">
+          <div className="esquerdaL">
+            <div className="txt-left">
+            <img className="logo-lg" src={logo} alt="logo" />
+            <h1>Seu parceiro de estudos!</h1>
+  
+            <p>Otimize sua rotina de estudos e faça testes ainda mais intuitivos, utiizando uma nova maneira de pensar com nossos serviços.
+            </p>
+            <p>Acesse nossa plataforma e explore os  limites do seu conhecimento, entre na sua sala e mostre quem manda!
+            </p>
+            </div>
+          </div>
+          <div className="direitaL">
+            <form action="submit" onSubmit={this.efetuaLogin}>
+              <h1 className='h1-login'>Login</h1>
+  
+              <input type="email" placeholder="Email"
+                name="email"
+                value={this.state.email} 
+                onChange={this.atualizaStateCampo} />
+  
+              <input type="password" placeholder="Senha"
+                name="senha"
+                value={this.state.senha}
+                onChange={this.atualizaStateCampo} />
+  
+              <p style={{ color: 'red' }}>{this.state.erroMensagem}</p>
+  
+              {
+                this.state.isLoading === true &&
+                <button type="submit" disabled className="btn-formL">Loading...</button>
+              }
+              {
+                this.state.isLoading === false &&
+                <button disabled={this.state.email === '' || this.state.senha === '' ? 'none' : ''} className="btn-formL" type="submit">Entrar</button>
+              }
+            </form>
+  
+            <div className="contaL">
+              <p>Não possui uma conta?</p> <Link to="/Cadastro">Cadastre-se.</Link>
+            </div>
           </div>
         </div>
-        <div className="direitaL">
-          <form action="submit" onSubmit={this.efetuaLogin}>
-            <h1 className='h1-login'>Login</h1>
-
-            <input type="email" placeholder="Email"
-              name="email"
-              value={this.state.email} 
-              onChange={this.atualizaStateCampo} />
-
-            <input type="password" placeholder="Senha"
-              name="senha"
-              value={this.state.senha}
-              onChange={this.atualizaStateCampo} />
-
-            <p style={{ color: 'red' }}>{this.state.erroMensagem}</p>
-
-            {
-              this.state.isLoading === true &&
-              <button type="submit" disabled className="btn-formL">Loading...</button>
-            }
-            {
-              this.state.isLoading === false &&
-              <button disabled={this.state.email === '' || this.state.senha === '' ? 'none' : ''} className="btn-formL" type="submit">Entrar</button>
-            }
-          </form>
-
-          <div className="contaL">
-            <p>Não possui uma conta?</p> <Link to="/Cadastro">Cadastre-se.</Link>
-          </div>
-        </div>
-      </div>
-    );
+      );
+    }
+    else{
+      return(
+        window.location.href = '/home'
+      );
+    }
+    
   }
 }
