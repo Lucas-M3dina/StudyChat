@@ -21,7 +21,7 @@ alternativas, o software analisa os resultados de forma ágil, e retorna sua ass
 
 
 <p align="center"> <img align="center" width="150px" src="https://github.com/Lucas-M3dina/Robotica/blob/frontend/Front-End/src/assets/logo.png"/></p>
-<h3 align="center"> Caso deseje ver um pouco da nossa aplicação acesse <a href="https://github.com/Lucas-M3dina/Robotica/">StudyChat</a> </h3>
+<h3 align="center"> Caso deseje ver um pouco da nossa aplicação acesse <a href="https://mystudychat.vercel.app">StudyChat</a> </h3>
 
 
 &nbsp;
