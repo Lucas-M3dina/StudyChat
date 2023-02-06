@@ -16,7 +16,7 @@ export default class Login extends Component {
       senha: '',
       erroMensagem: '',
       isLoading: false
-    }
+    } 
   };
 
   efetuaLogin = (event) => {
@@ -79,7 +79,7 @@ export default class Login extends Component {
           </div>
           <div className="direitaL">
             <form action="submit" onSubmit={this.efetuaLogin}>
-              <h1 className='h1-login'>Login</h1>
+              <h1 className='h1-login-direita'>Login</h1>
   
               <input type="email" placeholder="Email"
                 name="email"
