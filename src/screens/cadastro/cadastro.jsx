@@ -1,14 +1,11 @@
 import React from 'react'
 import logo from '../../assets/logo.png'
-import banner from '../../assets/banner-cadastro-fundo.png'
 import img from '../../assets/undraw-cadastro.png'
 import './cadastro_style.css'
 import api from '../../services/api'
 import { Component } from 'react';
 import { Link } from 'react-router-dom'
 import { parseJWT, usuarioAutenticacao } from '../../services/auth';
-// import '../css/Reset.css'
-// import './css/Forms.css';
 
 export default class Cadastro extends Component {
   constructor(props) {
