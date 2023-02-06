@@ -12,12 +12,10 @@ import Bar from '../../assets/bars.svg'
 import { parseJWT, usuarioAutenticacao } from '../../services/auth';
 import Footer from '../../components/footer'
 import api from '../../services/api'
-import { Component } from 'react';
 import { Link } from 'react-router-dom'
 
-export default class Cadastro extends Component {
-
-  render() {
+export default function Home() {
+  
     if (usuarioAutenticacao() ) {
       return (
         <>
@@ -104,6 +102,4 @@ export default class Cadastro extends Component {
         window.location.href = '/'
       );
     }
-    
-  }
 }
