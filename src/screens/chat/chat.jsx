@@ -2,8 +2,8 @@ import React, { useState, useEffect} from "react";
 import css from './chat.css'
 import api from '../../services/api'
 import { Link } from 'react-router-dom'
-
-import Header from '../../components/header/header'
+import logo from '../../assets/logo.png'
+import Carousel from 'react-bootstrap/Carousel'
 
 
 export default function Chat() {
@@ -80,27 +80,35 @@ export default function Chat() {
   
   return ( 
     <>
-      <Header/>
+      <header className="header-chat">
+        <Link to='/'>
+          <img src={logo} alt="Logo" className="logo-Chat"/>
+        </Link>
+      </header>
       
       <main>
-        <div className="container-questionarios">
-          {
-            questionarios.map((q) => {
-              return(
-                <button onClick={() => {
-                  ListaQuestoesQuestionario(q)
-                  setQuestao(0);
+          <Carousel variant="dark" className="container-questionarios">
+            {
+              questionarios.map((q) => {
+                return(
+                  <Carousel.Item >
+                    <button onClick={() => {
+                    ListaQuestoesQuestionario(q)
+                    setQuestao(0);
+                    
+                    var containerMsg = document.getElementById('mensagens');
+                    containerMsg.innerHTML = '';
+                    
+                    containerMsg.innerHTML = containerMsg.innerHTML +'<p class="titulo-msg">' + 'Iniciando o questionario: ' + q.materia + ' - ' + q.assunto + '</p>'
                   
-                  var containerMsg = document.getElementById('mensagens');
-                  containerMsg.innerHTML = '';
+                  }}  className='btn-questionario'>{q.materia} - {q.assunto}</button>
+                  </Carousel.Item>
                   
-                  containerMsg.innerHTML = containerMsg.innerHTML +'<p class="titulo-msg">' + 'Iniciando o questionario: ' + q.materia + ' - ' + q.assunto + '</p>'
-                
-                }}  className='btn-questionario'>{q.materia} - {q.assunto}</button>
-              )
-            })
-          }
-        </div>
+                )
+              })
+            }
+          </Carousel>
+        
 
         <div className="chat">
           <div id="mensagens" >

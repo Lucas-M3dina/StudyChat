@@ -11,6 +11,16 @@ input {
     all: unset;
 }
 
+.header-chat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+.logo-Chat{
+    width: 100px;
+}
 
 .btn-questionario{
     background-color: #6E48AA;

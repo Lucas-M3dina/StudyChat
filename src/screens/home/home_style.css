@@ -251,6 +251,12 @@ footer{
     }
 }
 
+@media(max-width: 1325px){
+    .main-home {
+        padding-top: 70px;
+    }
+}
+
 @media(max-width: 1160px){
     
     .titulo-banner-home {
