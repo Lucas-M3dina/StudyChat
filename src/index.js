@@ -6,7 +6,7 @@ import Chat from "./screens/chat/chat.jsx"
 import Cadastro from './screens/cadastro/cadastro.jsx';
 import Home from "./screens/home/home.jsx"
 import MeusChats from './screens/meus-chats/meus-chats.jsx';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 import {
   Route,

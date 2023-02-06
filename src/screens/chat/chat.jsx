@@ -3,7 +3,6 @@ import css from './chat.css'
 import api from '../../services/api'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/logo.png'
-import Carousel from 'react-bootstrap/Carousel'
 
 
 export default function Chat() {
@@ -87,28 +86,24 @@ export default function Chat() {
       </header>
       
       <main>
-          <Carousel variant="dark" className="container-questionarios">
-            {
-              questionarios.map((q) => {
-                return(
-                  <Carousel.Item >
-                    <button onClick={() => {
-                    ListaQuestoesQuestionario(q)
-                    setQuestao(0);
-                    
-                    var containerMsg = document.getElementById('mensagens');
-                    containerMsg.innerHTML = '';
-                    
-                    containerMsg.innerHTML = containerMsg.innerHTML +'<p class="titulo-msg">' + 'Iniciando o questionario: ' + q.materia + ' - ' + q.assunto + '</p>'
+        <div className="container-questionarios">
+          {
+            questionarios.map((q) => {
+              return(
+                <button onClick={() => {
+                  ListaQuestoesQuestionario(q)
+                  setQuestao(0);
                   
-                  }}  className='btn-questionario'>{q.materia} - {q.assunto}</button>
-                  </Carousel.Item>
+                  var containerMsg = document.getElementById('mensagens');
+                  containerMsg.innerHTML = '';
                   
-                )
-              })
-            }
-          </Carousel>
-        
+                  containerMsg.innerHTML = containerMsg.innerHTML +'<p class="titulo-msg">' + 'Iniciando o questionario: ' + q.materia + ' - ' + q.assunto + '</p>'
+                
+                }}  className='btn-questionario'>{q.materia} - {q.assunto}</button>
+              )
+            })
+          }
+        </div>
 
         <div className="chat">
           <div id="mensagens" >
