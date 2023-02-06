@@ -11,6 +11,10 @@
   display: none;
 }
 
+.logo-header{
+  width: 120px;
+}
+
 .img-menu{
   display: none;
 }
