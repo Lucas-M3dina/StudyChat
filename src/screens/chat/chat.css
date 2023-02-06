@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-/* !!! alterar box-body, não limitar o tamanho de nada!!! */
-/* !!! arrumar imagem do undraw!!!*/
 
 *{
     box-sizing: border-box;
@@ -12,7 +10,6 @@
 input {
     all: unset;
 }
-
 
 
 .btn-questionario{
@@ -146,3 +143,4 @@ input {
     border-left: unset;
     font-weight: bold;
 }
+

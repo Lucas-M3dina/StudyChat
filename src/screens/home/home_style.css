@@ -6,77 +6,9 @@
     text-decoration: none;
 }
 
-#nav-bar-responsivo{
-    display: none;
-}
-
-.img-menu{
-    display: none;
-}
-
-.laranja{
-    color: #FF5D05;
-    min-width: 236px;
-}
-
-.ciano{
-    color: #2F6BB1;
-    min-width: 86px;
-}
-
-.vinho{
-    color: #7A2D72;
-    min-width: 151px;
-}
-
-header{
-    box-shadow: 0px 3px 19px rgb(0 0 0 / 25%);}
-
-.container-header-home{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin: 0 auto;
-    min-width: 1148px;
-    height: 90px;
-    
-}
-
-.header-Home{
-    padding: 11px 0;
-    height: 90px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #ffffff;
-    position: fixed;
-}
-
 .main-home{
     padding-top: 90px;
 }
-
-#nav-bar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 46%;
-}
-
-.logo-header{
-    width: 130px;
-}
-
-.titulo-home{
-    font-family: 'Titillium Web';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-}
-
-
 
 .container-banner-home{
     background-image: url(../../assets/Banner-home.png);
@@ -320,48 +252,7 @@ footer{
 }
 
 @media(max-width: 1160px){
-    .img-menu{
-        display: unset;
-        width: 40px;
-    }
-
-    #nav-bar{
-        display: none;
-    }
-
-    .container-header-home {
-         min-width: unset; 
-    }
-
-    #nav-bar-responsivo{
-        display: none;
-        position: fixed;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        top: 90px;
-        right: 0;
-        background-color: #ffffff;
-        padding: 50px;
-    }
-
-    .titulo-home {
-        margin: 10px 0;
-        text-align: center;
-    }
-
-    .laranja{
-        border-bottom: 4px solid #ff5d05;
-    }
-
-    .vinho{
-        border-bottom: 4px solid #7A2D72;
-    }
-
-    .ciano{
-        border-bottom: 4px solid #2F6BB1;
-    }
-
+    
     .titulo-banner-home {
         font-size: 33px;
         line-height: 74px;
