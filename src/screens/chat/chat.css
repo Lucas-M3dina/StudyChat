@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Titillium Web', sans-serif;
+    border: none;
 } 
 
 input {
@@ -23,12 +24,22 @@ input {
 }
 
 .btn-questionario{
-    background-color: #6E48AA;
-    border-radius: 20px;
     padding: 15px 25px;
     color: #ffffff;
     font-size: 16px;
     margin: 20px;
+    background: #89C33E;
+    border-radius: 8px;
+
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+
+    display: none;
+
 }
 
 .container-questionarios{
@@ -152,4 +163,14 @@ input {
     border-radius: 0 9px 9px 0;
     border-left: unset;
     font-weight: bold;
+    
 }
+
+.seta{
+    width: 25px;
+}
+
+.aparecer{
+    display: unset !important;
+}
+

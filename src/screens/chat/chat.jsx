@@ -3,6 +3,8 @@ import css from './chat.css'
 import api from '../../services/api'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/logo.png'
+import SetaEsquerda from '../../assets/seta-esquerda.png'
+import SetaDireita from '../../assets/seta-direita.png'
 
 
 export default function Chat() {
@@ -71,15 +73,27 @@ export default function Chat() {
   useEffect(() => {
     salvarQuestionarios();
     document.getElementById('form').addEventListener('submit', () => {
-      questao = questao + 1
-      console.log(questao);
+      questao = questao + 1;
     } )
   }, []);
+
+  function carrosel(e){
+      const questionariosListados = document.querySelectorAll('.btn-questionario');
+      console.log(e.target.parentNode)
+      questionariosListados[questionariosListados.length - 1].classList.add('aparecer');
+      const Seta = document.querySelector('#SetaDireita')
+
+      Seta.addEventListener('click', () => {
+        var deletar = document.querySelector('.aparecer');
+        deletar.classList.remove('aparecer')
+        console.log(`dentro do evento`)
+      })
+  }
 
   
   return ( 
     <>
-      <header className="header-chat">
+      <header  className="header-chat">
         <Link to='/'>
           <img src={logo} alt="Logo" className="logo-Chat"/>
         </Link>
@@ -87,6 +101,7 @@ export default function Chat() {
       
       <main>
         <div className="container-questionarios">
+          <img src={SetaEsquerda} className='seta' alt="SetaDireita" />
           {
             questionarios.map((q) => {
               return(
@@ -103,6 +118,8 @@ export default function Chat() {
               )
             })
           }
+
+          <img onClick={(e) => {carrosel(e)}} src={SetaDireita} className='seta' alt="SetaDireita" id="SetaDireita" />
         </div>
 
         <div className="chat">
