@@ -30,7 +30,7 @@ namespace WebApi_Robotica.Contexts
         {
             if (!optionsBuilder.IsConfigured)
             {
-               optionsBuilder.UseSqlServer("Data Source=robotica.database.windows.net; initial catalog=robotica; user Id=robotica; pwd=Senai@132;");
+               optionsBuilder.UseSqlServer("Data Source=studychat.database.windows.net; initial catalog=studychat; user Id=studychat; pwd=senai@132;");
             }
         }
 
