@@ -153,7 +153,69 @@
     font-family: 'Titillium Web';
     font-style: normal;
     font-weight: 700;
-    font-size: 29px;
-    /* line-height: 99px; */
+    font-size: 36px;
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    color: #371A45;
+    margin-bottom: 40px;
+}
+
+.container-form-questionario{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-input-questionario{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.container-input-questionario select{
+    color: #C79EDB;
+}
+
+
+.input-criar-questionario{
+    background: #F0F0F0;
+    border: 3px solid #371A45;
+    border-radius: 4px;
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
     color: #6b3f80;
+}
+
+.container-form-questionario input::placeholder{
+    color: #C79EDB;
+}
+
+.input-assunto-criar-questionario{
+    background: #F0F0F0;
+    border: 3px solid #371A45;
+    border-radius: 4px;
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: #6b3f80;
+    width: 70%;
+    margin: 20px 0;
+}
+
+.btn-criar-questionario {
+    background: #371A45;
+    border-radius: 4px;
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFFFFF;
+    padding: 10px 30px;
 }

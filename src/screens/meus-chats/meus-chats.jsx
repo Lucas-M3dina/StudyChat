@@ -11,6 +11,35 @@ import QuestaoIcon from '../../assets/questoes-icon.png'
 
 
 export default function MeusChats() {
+  const [materia, setMateria] = useState('');
+  const [assunto, setAssunto] = useState('');
+  const [idSerie, setIdSerie] = useState(0);
+  const [series, setSeries] = useState([]);
+
+  function criaQuestionario(event){
+    event.preventDefault();
+
+    api.post('/api/Questionarios', {
+      assunto: assunto,
+      materia: materia,
+      idSerie: idSerie
+    })
+  }
+
+  function listarSerie(){
+    api.get('/api/series')
+    .then(resposta => {
+      if (resposta.status === 200) {
+        setSeries(resposta.data)
+      }
+    })
+    
+  }
+
+  useEffect(() => {
+    listarSerie();
+  }, [])
+  
 
 
   return (
@@ -43,14 +72,22 @@ export default function MeusChats() {
 
               <div className="questionario">
                 <p className="texto-questionarios">Cadastre um questionário</p>
-                <form>
+                <form className="container-form-questionario">
                   <div className="container-input-questionario">
-                    <input type="text" name="materia" placeholder="Matéria" />
-                    <select name="sala" placeholder="Selecione uma sala"></select>
+                    <input className="input-criar-questionario" type="text" name="materia" placeholder="Matéria" required/>
+
+                    <select className="input-criar-questionario" onChange={(e) => {setIdSerie(e.event.target.value)}} name="idSerie" required>
+                        <option value="0">Selecione uma sala</option>
+                        {series.map(s => {
+                            return (
+                                <option value={s.idSerie}>{s.sala}</option>
+                            )
+                        })}
+                    </select>
                   </div>
 
-                  <input type="text" name="assunto" placeholder="Escreva o assunto do questionário" />
-                  <button type="submit">Cadastrar</button>
+                  <input className="input-assunto-criar-questionario" type="text" name="assunto" placeholder="Escreva o assunto do questionário" required/>
+                  <button className="btn-criar-questionario" type="submit">Cadastrar</button>
                 </form>
               </div>
             </div>
