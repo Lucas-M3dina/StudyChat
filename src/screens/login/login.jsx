@@ -1,12 +1,15 @@
 import React from "react";
 import logo from "../../assets/logo.png"
 import fundo from "../../assets/banner-cadastro-fundo.png"
+import Lroxo from "../../assets/forma-roxa.png"
+import RLaranja from "../../assets/forma-laranja.png"
 import css from "./login_style.css"
 import api from '../../services/api'
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { parseJWT, usuarioAutenticacao } from '../../services/auth';
 import { render } from "@testing-library/react";
+
 
 export default class Login extends Component {
   constructor(props) {
@@ -78,8 +81,9 @@ export default class Login extends Component {
             </div>
           </div>
           <div className="direitaL">
+            <img className="formaR" src={RLaranja} alt="RLaranja"></img>
             <form action="submit" onSubmit={this.efetuaLogin}>
-              <h1 className='h1-login-direita'>Login</h1>
+              <h1 className='h1-login-direita'>LOGIN</h1>
   
               <input type="email" placeholder="Email"
                 name="email"
@@ -101,11 +105,12 @@ export default class Login extends Component {
                 this.state.isLoading === false &&
                 <button disabled={this.state.email === '' || this.state.senha === '' ? 'none' : ''} className="btn-formL" type="submit">Entrar</button>
               }
-            </form>
-  
+
             <div className="contaL">
               <p>Não possui uma conta?</p> <Link to="/Cadastro">Cadastre-se.</Link>
             </div>
+            </form>
+  
           </div>
         </div>
       );

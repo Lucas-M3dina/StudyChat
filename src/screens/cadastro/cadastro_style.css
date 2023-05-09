@@ -9,8 +9,9 @@
 } 
 
 .h1-login { 
-    font-family: 'Single Day' sans-serif;
+    font-family: 'Titillium Web';
     font-size: 65px;
+    color: #FB9964;
     margin: 60px 0;
 }
 
@@ -29,11 +30,11 @@
 .btn-choose{
     width: 12rem;
     height: 2.7rem;
-    background-color: #FB9964;
     border-radius: 10px;
     font-family: 'Titillium Web', sans-serif;
-    color: #ffffff;
+    color: #FB9964;
     cursor: pointer;
+    border: #FB9964 3px solid;
 }
 
 .cadastro{
@@ -44,7 +45,7 @@
 }
 
 .box-body{
-    background-image: url(/src/assets/Cadastro.png);
+    background-color: white;
     background-repeat: no-repeat;
     background-size: 100%;
     display: flex;
@@ -61,6 +62,7 @@
 }
 
 .direita{
+    background-image: url(../../assets/forma-roxa-cad.png);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -74,10 +76,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 90%;
-    background-color: #ffffffa1;
-    width: 540px;
+    height: 88%;
+    background-color: #F9F7F7;
+    width: 680px;
     border-radius: 15px;
+    box-shadow: 0px 3.7378px 17.7545px rgba(0, 0, 0, 0.25);
 }
 
 .formulario {
@@ -100,7 +103,11 @@
 }
 
 #btn-aluno{
-    border: solid 2px #000000;
+    border: solid 3px #FB9964;
+}
+
+#btn-professor{
+    border: solid 3px #FB9964;
 }
 
 .esquerda input{
@@ -108,23 +115,21 @@
     height: 3rem;
     border-radius: 5px;
     padding-left: 5px;
-    background-color: #FB9964;
     box-shadow: 0 0 0 0;
-    border: 0 none;
+    border: #FB9964 3px solid;
     outline: 0;
-    color: #ffffff;
+    color: #FB9964;
 }
 
 .select-classe{
-    width: 100%;
-    height: 3rem;
+    width: calc(100% + 12px);
+    height: 54px;
     border-radius: 5px;
     padding-left: 5px;
-    background-color: #FB9964;
     box-shadow: 0 0 0 0;
-    border: 0 none;
+    border: #FB9964 3px solid;
     outline: 0;
-    color: #ffffff;
+    color: #FB9964;
 }
 
 .btn-choose{
@@ -135,7 +140,7 @@
 
 .esquerda input::placeholder{
     font-family: 'Titillium Web', sans-serif;
-    color: #ffffff;
+    color: #FB9964;
     padding-left: 5px;
 }
 
@@ -143,7 +148,7 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     font-size: large;
-    background-color: #ED8EC1;
+    background-color: #FB9964;
     color: #ffffff;
     cursor: pointer;
     border: none;
@@ -164,7 +169,7 @@
 
 .conta a{
     font-family: 'Titillium Web', sans-serif;
-    color: #F03384;
+    color: #FB9964;
     text-decoration-line: underline;
 }
 
@@ -200,12 +205,14 @@
 .logo-reg{
     width: 210px;
     height: 150px;
+    margin-left: 130px;
 }
 
 .banner-direita{
     width: 630px;
     height: 380px;
     margin-bottom: 25%;
+    margin-left: 100px;
   }
 
   @media (max-width:1380px){

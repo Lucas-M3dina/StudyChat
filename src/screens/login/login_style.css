@@ -23,7 +23,8 @@
     justify-content: space-between;
     height: 600px;
     width: 550px;
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-right: 25%;
 }
 
 .txt-left p{
@@ -48,7 +49,7 @@
 }
 
 .box-bodyL{
-    background-image: url(/src/assets/banner-login-fundo.png);
+    background-color: white;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     display: flex;
@@ -57,6 +58,8 @@
 }
 
 .esquerdaL{
+    background-image: url(../../assets/forma-roxa.png);
+    background-size: 100% 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -77,37 +80,45 @@
     margin-top: 90px;
 }
 
+.formaR{
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
 .h1-login-direita{
-    font-family: 'Single day', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
+    color: #eb7a61;
     font-size: 56px;
     margin: 10px;
 }
 
 .direitaL form{
-    background: rgba(255, 255, 255, 0.73);
-    border-radius: 21px;
-    width: 385px;
+    background: #F9F7F7;
+    width: 680px;
     display: flex;
     flex-direction: column;
+    box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.25);
+    border-radius: 21px;
     align-items: center;
     justify-content: space-evenly;
-    height: 55%;
+    height: 625px;
+    margin-top: 80px;
 }
 
 .direitaL input{
-    width: 18rem;
-    height: 3rem;
-    background: rgba(90, 124, 199, 0.85);
+    width: 35rem;
+    height: 4rem;
     border-radius: 12px;
     padding-left: 5px;
-    box-shadow: 0 0 0 0;
-    border: 0 none;
-    outline: 0;
+    border: #eb7a61 3px solid;
+    color: #eb7a61;
+
 }
 
 .direitaL input::placeholder{
     font-family: 'Titillium Web', sans-serif;
-    color: #ffffff;
+    color: #eb7a61;
     padding-left: 1px;
 }
 
@@ -115,12 +126,12 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     font-size: large;
-    background: #FFDF4A;
+    background: #eb7a61;
     border-radius: 9px;
-    color: #FF7A30;
+    color: #ffffff;
     border: none;
     cursor: pointer;
-    width: 8rem;
+    width: 10rem;
     height: 3.5rem;
 }
 
@@ -145,6 +156,11 @@
     justify-content: center;
     align-items: center;
 
+}
+
+.contaL p{
+    color: #eb7a61;
+    text-decoration: underline;
 }
 
 .redirectL{

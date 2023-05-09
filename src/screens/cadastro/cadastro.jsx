@@ -122,7 +122,7 @@ export default class Cadastro extends Component {
               <img className='logo' src={logo} alt= "logo"/>
             <div className="esquerda-form">
 
-              <h1 className="h1-login">Cadastro</h1>
+              <h1 className="h1-login">CADASTRO</h1>
 
               <div className='imput-choose' >
               <button onClick={() => {

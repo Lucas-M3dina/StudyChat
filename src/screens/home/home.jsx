@@ -63,7 +63,6 @@ export default function Home() {
                 <div className="container-desenvolvedores">
                   <img src={dev1} alt="Desenvolvedor" className="dev dev1" />
                   <img src={dev2} alt="Desenvolvedor" className="dev dev2" />
-                  <img src={dev3} alt="Desenvolvedor" className="dev dev1" />
                 </div>
               </section>
           </main>
