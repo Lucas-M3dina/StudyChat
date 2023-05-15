@@ -4,17 +4,14 @@ import astronauta from '../../assets/astronauta-home.png'
 import './home_style.css'
 import et from  '../../assets/et.png'
 import menino from '../../assets/menino-home.png'
-import dev1 from '../../assets/dev1.png'
-import dev2 from '../../assets/dev2.png'
-import dev3 from '../../assets/dev3.png'
-import Bar from '../../assets/bars.svg'
 import Header from '../../components/header/header'
-
+import linked from '../../assets/logotipo-do-linkedin.png'
+import git from '../../assets/github.png'
+import insta from '../../assets/instagram (1).png'
 import { parseJWT, usuarioAutenticacao } from '../../services/auth';
 import Footer from '../../components/footer'
 import api from '../../services/api'
 import { Link } from 'react-router-dom'
-
 export default function Home() {
   
     if (usuarioAutenticacao() ) {
@@ -61,8 +58,26 @@ export default function Home() {
               <section className="desenvolvedores">
                 <h2 className="titulo-desenvolvedores"> Conheça nossos desenvolvedores</h2>
                 <div className="container-desenvolvedores">
-                  <img src={dev1} alt="Desenvolvedor" className="dev dev1" />
-                  <img src={dev2} alt="Desenvolvedor" className="dev dev2" />
+                <div class="card card0">
+                <div class="border">
+                  <h2 class="AL">William Ferreira</h2>
+                  <div class="icons">
+                    <img src={linked} alt='linkedin' className='social'></img>
+                    <img src={git} alt='github' className='social'></img>
+                    <img src={insta} alt='instagram' className='social'></img>
+                  </div>
+                </div>
+              </div>
+              <div class="card card1">
+                <div class="border">
+                  <h2>Lucas Medina</h2>
+                  <div class="icons">
+                    <img src={linked} alt='linkedin' className='social'></img>
+                    <img src={git} alt='github' className='social'></img>
+                    <img src={insta} alt='instagram' className='social'></img>
+                  </div>
+                </div>
+              </div>
                 </div>
               </section>
           </main>
