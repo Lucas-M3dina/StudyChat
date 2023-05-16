@@ -9,9 +9,10 @@ import linked from '../../assets/logotipo-do-linkedin.png'
 import git from '../../assets/github.png'
 import insta from '../../assets/instagram (1).png'
 import { parseJWT, usuarioAutenticacao } from '../../services/auth';
-import Footer from '../../components/footer'
+import Footer from '../../components/footer/footer.jsx'
 import api from '../../services/api'
 import { Link } from 'react-router-dom'
+
 export default function Home() {
   
     if (usuarioAutenticacao() ) {

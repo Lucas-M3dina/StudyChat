@@ -299,25 +299,6 @@
 /* fim cards de perfil */
 
 
-footer{
-    background: #7A2D72;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    margin-top: 50px;
-}
-
-.texto-footer{
-    font-family: 'Titillium Web';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    text-align: center;
-    color: #FFFFFF;
-}
-
-
 @media(max-width: 1500px){
 
     .texto-como_funciona {

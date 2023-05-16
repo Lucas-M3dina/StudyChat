@@ -3,6 +3,7 @@ import css from "./meus-chats.css"
 import api from '../../services/api'
 import { Link } from 'react-router-dom';
 import { parseJWT, usuarioAutenticacao } from '../../services/auth';
+import Footer from '../../components/footer/footer'
 import Header from '../../components/header/header'
 import BannerPrincipal from '../../assets/banner-meuschats.png'
 import BannerSecundario from '../../assets/banner-secundario.png'
@@ -15,6 +16,27 @@ export default function MeusChats() {
   const [assunto, setAssunto] = useState('');
   const [idSerie, setIdSerie] = useState(0);
   const [series, setSeries] = useState([]);
+  const [questionarios, setQuestionarios] = useState([]);
+
+  const [idQuestionario, setIdQuestionarios] = useState(0);
+  const [enunciado, setEnunciado] = useState('');
+  const [alternativaA, setAlternativaA] = useState('');
+  const [alternativaB, setAlternativaB] = useState('');
+  const [alternativaC, setAlternativaC] = useState('');
+  const [alternativaD, setAlternativaD] = useState('');
+  const [alternativaCorreta, setAlternativaCorreta] = useState('');
+
+  
+
+  /* {
+    "idQuestionario": 1,
+    "enunciado": "Quando o brasil foi descoberto?",
+    "alternativaA": "1222",
+    "alternativaB": "1800",
+    "alternativaC": "1899",
+    "alternativaD": "1500",
+    "alternativaCorreta": "1500"
+  } */
 
   function criaQuestionario(event){
     event.preventDefault();
@@ -26,6 +48,20 @@ export default function MeusChats() {
     })
   }
 
+  function criaQuestao(event){
+    event.preventDefault();
+
+    api.post('/api/questoes', {
+      idQuestionario: idQuestionario,
+      enunciado: enunciado,
+      alternativaA: alternativaA,
+      alternativaB: alternativaB,
+      alternativaC: alternativaC,
+      alternativaD: alternativaD,
+      alternativaCorreta: alternativaCorreta
+    })
+  }
+
   function listarSerie(){
     api.get('/api/series')
     .then(resposta => {
@@ -33,7 +69,15 @@ export default function MeusChats() {
         setSeries(resposta.data)
       }
     })
-    
+  }
+
+  function listarQuestionarios(){
+    api.get('/api/questionarios/todos')
+    .then(resposta => {
+      if (resposta.status === 200) {
+        setQuestionarios(resposta.data);
+      }
+    })
   }
   
   function trocarTab(){
@@ -82,6 +126,7 @@ export default function MeusChats() {
   useEffect(() => {
     listarSerie();
     trocarTab();
+    listarQuestionarios();
   }, [])
   
 
@@ -122,11 +167,11 @@ export default function MeusChats() {
 
               <div className="questionario">
                 <p className="texto-questionarios">Cadastre um questionário</p>
-                <form className="container-form-questionario">
+                <form className="container-form-questionario" onSubmit={(e) => {criaQuestionario(e)}}>
                   <div className="container-input-questionario">
-                    <input className="input-criar-questionario" type="text" name="materia" placeholder=" Matéria" required/>
+                    <input className="input-criar-questionario" type="text" name="materia" placeholder=" Matéria" onChange={(e) => {setMateria(e.target.value)}} required/>
 
-                    <select className="input-criar-questionario" onChange={(e) => {setIdSerie(e.event.target.value)}} name="idSerie" required>
+                    <select className="input-criar-questionario" value={idSerie} onChange={(e) => {setIdSerie(e.target.value)}} name="idSerie" required>
                         <option value="0">   Selecione uma sala</option>
                         {series.map(s => {
                             return (
@@ -136,17 +181,58 @@ export default function MeusChats() {
                     </select>
                   </div>
 
-                  <input className="input-assunto-criar-questionario" type="text" name="assunto" placeholder=" Escreva o assunto do questionário" required/>
+                  <input className="input-assunto-criar-questionario" type="text" name="assunto" placeholder=" Escreva o assunto do questionário" onChange={(e) => {setAssunto(e.target.value)}} required/>
                   <button className="btn-criar-questionario" type="submit">Cadastrar</button>
                 </form>
               </div>
 
               <div className="questoes">
-                      <h1>TESTE</h1>
+                <p className="texto-questionarios">Cadastre uma questão</p>
+                <form className="container-form-questionario" onSubmit={(e) => {criaQuestao(e)}}>
+                  <div className="container-input-questionario">
+
+                    <select className="input-criar-questionario" value={idQuestionario} onChange={(e) => {setIdQuestionarios(e.target.value)}} name="idQuestionario" required>
+                        <option value="0">   Selecione um Questionario</option>
+                        {questionarios.map(s => {
+                            return (
+                                <option value={s.idQuestionario}>{s.assunto}</option>
+                            )
+                        })}
+                    </select>
+
+                    <select className="input-criar-questionario"  onChange={(e) => {setAlternativaCorreta(e.target.value)}}>
+                      <option value=''>   Qual é a alternativa correta?</option>
+                      <option value='A'>A</option>
+                      <option value='B'>B</option>
+                      <option value='C'>C</option>
+                      <option value='D'>D</option>
+
+                    </select>
+                  </div>
+
+                  <input className="input-criar-questionario" type="text" placeholder=" Enunciado" onChange={(e) => {setEnunciado(e.target.value)}} required/>
+
+                  <div className="container-input-questionario">
+                    <input className="input-criar-questionario" type="text" placeholder=" Alternativa A" onChange={(e) => {setAlternativaA(e.target.value)}} required/>
+                    <input className="input-criar-questionario" type="text" placeholder=" Alternativa B" onChange={(e) => {setAlternativaB(e.target.value)}} required/>
+                    
+                  </div>
+
+                  <div className="container-input-questionario">
+                    <input className="input-criar-questionario" type="text" placeholder=" Alternativa C" onChange={(e) => {setAlternativaC(e.target.value)}} required/>
+                    <input className="input-criar-questionario" type="text" placeholder=" Alternativa D" onChange={(e) => {setAlternativaD(e.target.value)}} required/>
+                  </div>
+
+                  <button className="btn-criar-questionario" type="submit">Cadastrar</button>
+                </form>
               </div>
             </div>
           </section>
         </main>
+
+        <Footer/>
+
+        
     </>
   );
 }
