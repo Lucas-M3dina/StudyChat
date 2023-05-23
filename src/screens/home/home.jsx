@@ -18,7 +18,7 @@ export default function Home() {
     if (usuarioAutenticacao() ) {
       return (
         <>
-          <Header/>
+          <Header item1="Como funciona?" item2="Sobre nós"/>
   
           <main className='main-home'>
               <section className="container-banner-home">

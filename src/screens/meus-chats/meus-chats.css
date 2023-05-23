@@ -23,7 +23,7 @@
 }
 
 .figura-questionario{
-    width: 550px;
+    width: 48%;
 }
 
 .texto-principal{
@@ -42,6 +42,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 25px;
+    width: 76%;
 }
 
 .btn-criar{
@@ -74,7 +75,7 @@
 }
 
 .figura-banner-secundario {
-    width: 470px;
+    width: 41%;
 }
 
 .texto-banner-secundario{
@@ -86,15 +87,16 @@
     text-align: center;
     color: #FFFFFF;
     max-width: 685px;
+    width: 48%;
 }
 
 .box-formularios{
-    width: 835px;
+    max-width: 835px;
+    width: 80%;
     margin: 0 auto;
     border: 3px solid #7A2D72;
     border-radius: 15px;
-    padding: 40px;
-    height: 700px;
+    padding: 40px 40px 80px;
     display: flex;
     /* justify-content: center; */
     flex-direction: column;
@@ -264,6 +266,200 @@
 
 .tab-bar{
     cursor: pointer;
+}
+
+.container-banner-principal{
+    width: 50%;
+}
+
+@media (max-width:1400px){
+    .texto-principal {
+        font-size: 50px;
+    }
+}
+
+@media (max-width:1262px){
+    .texto-principal {
+        font-size: 40px;
+        line-height: 65px;
+    }
+
+    .btn-volta{
+        font-size: 22px;
+    }
+
+    .btn-criar{
+        font-size: 22px;
+    }
+
+    .figura-questionario {
+        width: 46%;
+    }
+
+    .container-banner-principal {
+        width: 47%;
+    }
+
+    .texto-banner-secundario {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:850px){
+    .banner-principal {
+        padding-top: 20px;
+    }
+
+    .texto-principal {
+        font-size: 31px;
+        line-height: 60px;
+    }
+
+    .btn-criar{
+        padding: 7px 45px;
+    }
+
+    .texto-banner-secundario {
+        font-size: 18px;
+    }
+
+    .tab-bar {
+        width: 75%;
+    }
+
+    .texto-questionarios {
+        font-size: 33px;
+    }
+
+    .container-form-questionario input,.container-form-questionario select{
+        padding: 1px 0;
+    }
+}
+
+@media (max-width:758px){
+    .texto-principal {
+        font-size: 26px;
+        line-height: 52px;
+    }
+
+    .btn-criar{
+        margin-right: 15px;
+        font-size: 19px;
+    }
+}
+
+@media (max-width:651px){
+
+    .questoes {
+        margin-top: 30px;
+    }
+
+    .questionario{
+        margin-top: 30px;
+    }
+
+    .icon-questionario svg {
+        width: 25px;
+    }
+
+    .icon-questao svg{
+        width: 30px;
+    }
+
+    .texto-questionarios {
+        font-size: 27px;
+        margin: 20px 0 30px;
+    }
+
+    .box-formularios {
+        padding: 40px 15px 80px;
+        width: 90%;
+    }
+
+    .tab-bar{
+        min-width: 322px;
+    }
+
+    .texto-principal {
+        font-size: 18px;
+        line-height: 29px;
+    }
+
+    .btn-criar {
+        margin-right: 15px;
+        font-size: 14px;
+        padding: 7px 30px;
+        border-radius: 3px;
+    }
+
+    .btn-volta {
+        font-size: 16px;
+    }
+
+    .banner-secundario {
+        flex-direction: column;
+    }
+
+    .texto-banner-secundario {
+        font-size: 18px;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .tab-bar{
+        min-width: 255px;
+    }
+
+    .tab-bar div{
+        font-size: 16px;
+    }
+
+    .texto-questionarios {
+        font-size: 24px;
+        margin: 0px 0 22px;
+    }
+
+    .input-assunto-criar-questionario {
+        margin: 10px 0 26px;
+    }
+    
+    .container-form-questionario input,.container-form-questionario select{
+        font-size: 18px;
+    }
+
+    .container-input-questionario select{
+        height: 35px;
+    }
+
+    .zerar-margin{
+        margin-top: 0;
+    }
+
+    .btn-criar-questionario {
+        margin-top: 20px;
+        font-size: 19px;
+    }
+    
+}
+
+@media (max-width:440px){
+    .figura-questionario {
+        display: none;
+    }
+
+    .container-banner-principal {
+        width: 70%;
+    }
+
+    .banner-principal {
+        justify-content: center;
+    }
+
+    .box-formularios {
+        padding: 40px 15px 25px;
+    }
+
+    
 }
 
 

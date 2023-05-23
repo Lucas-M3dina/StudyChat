@@ -49,7 +49,7 @@ export default class Login extends Component {
               break;
 
             default:
-              this.props.history.push("/home") //alterar a coisinha aqui
+              this.props.history.push("/home")
               break;
           }
         }
