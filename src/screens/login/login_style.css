@@ -4,14 +4,13 @@
 /* !!! alterar box-body, não limitar o tamanho de nada!!! */
 /* !!! arrumar imagem do undraw!!!*/
 
-
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0; 
 }
 
-.logo-lg{
+.logo-lg{ 
     width: 195px;
     height: 135px;
 }
@@ -104,6 +103,8 @@
     justify-content: space-evenly;
     height: 625px;
     margin-top: 80px;
+    min-height: 770px;
+    z-index: 1;
 }
 
 .direitaL input{
@@ -193,31 +194,28 @@
 
 @media(max-width: 1500px){
 
-    .box-bodyL{
-        background-image: url(/src/assets/login.png);
+    .logo-lg {
+        width: 180px;
+        height: 125px;
     }
 
-    .logo-lg {
-        width: 190px;
-        height: 130px;
+    .formaR{
+        width: 45%;
     }
 
     .txt-left{
-        width: 510px;
+        margin-top: 35px;
+        margin-right: 25%;
+        width: 465px;
         height: 540px;
-        margin-top: 100px;
     }
 
     .txt-left h1 {
-        font-size: 55px;
+        font-size: 50px;
     }
 
     .txt-left p{
-        font-size: 24px;
-    }
-
-    .esquerdaL{
-        padding: 10px;
+        font-size: 22px;
     }
 
     .direitaL{
@@ -231,48 +229,67 @@
     
     .direitaL form{
         height: 48%;
-        margin-top: 10%;
-        margin-left: 35px;
+        margin-right: 35px;
+        width: 540px;
+    }
+
+    .direitaL input{
+        width: 25rem;
     }
 }
 
 @media(max-width: 769px){
 
-    .box-bodyL{
-        background-image: url(/src/assets/Login-tablet.png);
-    }
-
-    .direitaL form {
-        height: 50%;
+    .direitaL{
+        position: absolute;
     }
 
     .esquerdaL{
+        position: relative;
+        width: 30%;
+    }
+
+    .txt-left{
         display: none;
     }
 
-    .h1-login-direita{
-        font-size: 65px;
+    .formaR{
+        width: 70%;
+        height: 15%;
+    }
+
+    .direitaL form{
+        height: 500px;
+        width: 495px;
+        margin-top: 35%;
+        margin-right: unset;
+        
+    }
+
+    .direitaL input{
+        width: 22rem;
     }
 
 }
 
 @media(max-width: 375px){
 
-    .box-bodyL{
-        background-image: url(/src/assets/Login-phone.png);
-    }
-
     .direitaL form {
-        height: 50%;
+        height: 430px;
         width: 80%;
-        margin-top: unset;
+        margin-top: 50%;
         margin-left: unset;
     }
 
-    .h1-login {
-        font-size: 55px;
-        margin-top: 15px;
+    .esquerdaL{
+        width: 48%;
     }
+
+    .formaR{
+        width: 50%;
+    height: 10%;
+    }
+    
 
     .direitaL input {
         width: 15rem;

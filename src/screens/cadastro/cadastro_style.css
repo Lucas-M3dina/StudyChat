@@ -25,7 +25,7 @@
     align-items: center;
     justify-content: space-between;
     width: 80%;
-}
+} 
 
 .btn-choose{
     width: 12rem;
@@ -217,10 +217,6 @@
 
   @media (max-width:1380px){
 
-    .box-body{
-        background-image: url(/src/assets/banner-cadastro-fundo.png);
-    }
-
     .banner-direita{
         margin-bottom: 275px;
     }
@@ -230,16 +226,22 @@
     }
 
     .direita{
-        margin-top: 35px;
+        margin-top: unset;
     }
 
     .esquerda-form{
-        height: 80%;
+        height:75%;
+        width: 550px;
+    }
+
+    .input-choose{
+        width: 80%;
     }
 
     .banner-direita {
-        width: 450px;
-        height: 295px;
+        width: 430px;
+        height: 285px;
+        margin-left: 35px;
     }
 
   }
@@ -247,7 +249,8 @@
   @media(max-width:1200px){
 
     .box-body{
-        background-image: url(/src/assets/Cadastro-tablet.png);
+        background-image: url(/src/assets/forma-roxa-cad.png);
+        background-size: 100% 100%;
     }
 
     .esquerda-form {
@@ -287,52 +290,60 @@
 
   @media (max-width:620px){
 
-    .box-body{
-        background-image: url(/src/assets/Cadastro-phone.png);
+    .esquerda {
+        position: absolute;
+        z-index: 1;
+        margin-top: 25%;
+    }
+    
+    .esquerda-form {
+        width: 80%;
+        min-width: 330px;
+        min-height: 485px;
+    }
+    
+    .imput-choose {
+        width: 88%;
+    }
+    
+    .formulario{
+       width: 85%;
+    }
+
+    .direita {
+        display: flex;
+        background-size: cover;
+        position: relative;
+    }
+    
+    .formulario {
+        width: 85%;
+    }
+    
+    .esquerda input {
+        height: 2rem;
+        margin-bottom: 10px;
+    }
+    
+    .select-classe {
+        height: 2.5rem;
+        margin-bottom: 10px;
     }
 
     .h1-login{
-        font-size: 45px;
-        margin: 20px 0;
+        margin: 10px 0;
+    }
+
+    .logo-reg{
+        display: none;
+    }
+
+    .banner-direita{
+        display: none;
     }
 
     .logo{
-        display: unset;
-        margin-top: unset;
-        margin-bottom: 25px;
-        width: 145px;
-        height: 100px;
-    }
-    
-
-    .esquerda input {
-        height: 2rem;
-    }
-
-    .select-classe{
-        height: 2rem;
-    }
-
-    .esquerda-form{
-        width: 80%;
-        min-width: 324px;
-        min-height: unset;
-    }
-
-    .input-choose button{
-        width: 15px;
-    }
-    
-   
-    .btn-choose{
-        width: 8rem;
-        height: 2.2rem;
-    }
-
-    .btn-form{
-        width: 10rem;
-        height: 2.5rem;
-        font-size: 16px;
+        width: 40%;
     }
 
 
